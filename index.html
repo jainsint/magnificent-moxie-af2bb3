@@ -40,6 +40,15 @@
   .cat-group{display:contents;}
   .cat-items{display:contents;}
   .cat-toggle{display:none;}
+  .ji-burger{display:none;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid #d8e3ef;border-radius:10px;background:#fff;cursor:pointer;padding:0;-webkit-tap-highlight-color:rgba(24,98,171,.12);}
+  .ji-burger span{position:relative;display:block;width:18px;height:2px;background:#0f2742;border-radius:2px;transition:transform .2s,top .2s,background .2s;}
+  .ji-burger span::before,.ji-burger span::after{content:"";position:absolute;left:0;display:block;width:18px;height:2px;background:#0f2742;border-radius:2px;transition:transform .2s,top .2s,background .2s;}
+  .ji-burger span::before{top:-6px;}
+  .ji-burger span::after{top:6px;}
+  header[data-menu-open] .ji-burger span{background:transparent;}
+  header[data-menu-open] .ji-burger span::before{top:0;transform:rotate(45deg);}
+  header[data-menu-open] .ji-burger span::after{top:0;transform:rotate(-45deg);}
+  .ji-mobnav{display:none;}
   @media (max-width:768px){
     [data-r="stack"]{grid-template-columns:1fr !important;gap:34px !important;}
     [data-r="g2"]{grid-template-columns:1fr 1fr !important;}
@@ -60,8 +69,10 @@
     #catalogue .cat-group[data-open] .cat-items{display:grid !important;}
     [data-r="fluid"]{width:auto !important;height:auto !important;}
     [data-r="pad"]{padding-top:60px !important;padding-bottom:60px !important;}
-    [data-r="nav"]{gap:0 !important;}
+    [data-r="nav"]{gap:12px !important;}
     [data-r="nav"] a:not(:last-child){display:none !important;}
+    .ji-burger{display:flex !important;}
+    header[data-menu-open] .ji-mobnav{display:flex !important;}
     /* Solid header on mobile — drops the per-frame backdrop-blur repaint that
        makes scrolling stutter on phones. */
     header{backdrop-filter:none !important;-webkit-backdrop-filter:none !important;background:#ffffff !important;}
@@ -165,10 +176,24 @@
       }
     }
   }
+  function handleBurger(e){
+    var hdr = document.querySelector('header'); if(!hdr) return;
+    var b = e.target && e.target.closest ? e.target.closest('.ji-burger') : null;
+    if(b){
+      if(hdr.hasAttribute('data-menu-open')){ hdr.removeAttribute('data-menu-open'); b.setAttribute('aria-expanded','false'); }
+      else { hdr.setAttribute('data-menu-open',''); b.setAttribute('aria-expanded','true'); }
+      return;
+    }
+    if(e.target && e.target.closest && e.target.closest('.ji-mobnav a')){
+      hdr.removeAttribute('data-menu-open');
+      var bb=hdr.querySelector('.ji-burger'); if(bb) bb.setAttribute('aria-expanded','false');
+    }
+  }
   if(!window.__jiCatToggleBound){
     window.__jiCatToggleBound = true;
     document.addEventListener('click', handleCatToggle, true);
     document.addEventListener('pointerup', handleCatToggle, true);
+    document.addEventListener('click', handleBurger, true);
   }
   function pulse(){ observeAll(); inViewReveal(); setEmail(); countCats(); }
   // Scroll reveal is primarily handled by IntersectionObserver (off the main
@@ -205,6 +230,7 @@
         </span>
       </a>
       <nav data-r="nav" style="display:flex;align-items:center;gap:30px;">
+        <button type="button" class="ji-burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
         <a href="#about" style="text-decoration:none;color:#42566a;font-size:14.5px;font-weight:500;letter-spacing:.2px;">About</a>
         <a href="#capabilities" style="text-decoration:none;color:#42566a;font-size:14.5px;font-weight:500;letter-spacing:.2px;">Capabilities</a>
         <a href="#catalogue" style="text-decoration:none;color:#42566a;font-size:14.5px;font-weight:500;letter-spacing:.2px;">Catalogue</a>
@@ -212,6 +238,13 @@
         <a href="#insights" style="text-decoration:none;color:#42566a;font-size:14.5px;font-weight:500;letter-spacing:.2px;">Insights</a>
         <a href="#contact" style="text-decoration:none;background:var(--ji-ink,#0f2742);color:#fff;font-size:14px;font-weight:600;padding:10px 20px;border-radius:999px;letter-spacing:.2px;white-space:nowrap;">Get in touch</a>
       </nav>
+    </div>
+    <div class="ji-mobnav" style="position:absolute;top:74px;left:0;right:0;flex-direction:column;background:#fff;border-bottom:1px solid #e7eef5;box-shadow:0 16px 30px -20px rgba(15,39,66,.5);">
+      <a href="#about" style="padding:15px 32px;text-decoration:none;color:#21303f;font-size:16px;font-weight:500;border-top:1px solid #f1f5fa;">About</a>
+      <a href="#capabilities" style="padding:15px 32px;text-decoration:none;color:#21303f;font-size:16px;font-weight:500;border-top:1px solid #f1f5fa;">Capabilities</a>
+      <a href="#catalogue" style="padding:15px 32px;text-decoration:none;color:#21303f;font-size:16px;font-weight:500;border-top:1px solid #f1f5fa;">Catalogue</a>
+      <a href="#factory" style="padding:15px 32px;text-decoration:none;color:#21303f;font-size:16px;font-weight:500;border-top:1px solid #f1f5fa;">Inside the Floor</a>
+      <a href="#insights" style="padding:15px 32px;text-decoration:none;color:#21303f;font-size:16px;font-weight:500;border-top:1px solid #f1f5fa;">Insights</a>
     </div>
   </header>
 
