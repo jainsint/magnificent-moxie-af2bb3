@@ -11,8 +11,8 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Understanding Fabric Weight (GSM) — Insights · Jains Internationnal</title>
-<meta name="description" content="A buyer's guide to GSM in woven garments: what fabric weight means, typical ranges for shirts and dresses, and how to choose the right weight for your market and season.">
+<title>Single-Needle Tailoring: Why It Makes a Better Shirt — Insights · Jains Internationnal</title>
+<meta name="description" content="What single-needle stitching means, why it's harder to do, and how to spot it. A buyer's guide to a classic mark of shirt quality.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -28,12 +28,20 @@
   .art li{position:relative;padding-left:26px;font-size:17px;line-height:1.65;color:#3d4f60;margin-bottom:12px;}
   .art li::before{content:"";position:absolute;left:2px;top:10px;width:8px;height:8px;background:#1862ab;transform:rotate(45deg);}
   .art strong{color:#21303f;font-weight:600;}
+  .ctab{width:100%;border-collapse:collapse;margin:8px 0 28px;font-size:15px;}
+  .ctab th,.ctab td{text-align:left;padding:13px 16px;border-bottom:1px solid #e6eef6;vertical-align:top;}
+  .ctab th{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;font-weight:500;}
+  .ctab td{color:#3d4f60;}
+  .ctab td:first-child{font-family:'Spectral',serif;color:#0f2742;font-weight:600;font-size:16px;}
+  .ctab tr:last-child td{border-bottom:none;}
   @media (max-width:768px){
     .ji-nav a:not(.ji-cta){display:none;}
     .ji-burger{display:flex !important;}
     header[data-menu-open] .ji-mobnav{display:flex !important;}
     .ji-foot{flex-direction:column;align-items:flex-start !important;gap:24px !important;}
     .spec{grid-template-columns:1fr !important;}
+    .ctab{font-size:13.5px;}
+    .ctab th,.ctab td{padding:10px 11px;}
   }
   .ji-burger{display:none;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid #d8e3ef;border-radius:10px;background:#fff;cursor:pointer;padding:0;order:2;-webkit-tap-highlight-color:rgba(24,98,171,.12);}
   .ji-burger span{position:relative;display:block;width:18px;height:2px;background:#0f2742;border-radius:2px;transition:transform .2s,top .2s,background .2s;}
@@ -80,94 +88,62 @@
 
   <!-- ARTICLE -->
   <article class="art">
-
-    <!-- title block -->
     <div style="max-width:760px;margin:0 auto;padding:64px 32px 0;">
       <a href="index.html" style="text-decoration:none;color:#1862ab;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.5px;display:inline-flex;align-items:center;gap:7px;margin-bottom:26px;">← All insights</a>
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:#1862ab;margin-bottom:16px;">Fabric · Guide</div>
-      <h1 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(32px,4.4vw,50px);line-height:1.08;letter-spacing:-.5px;color:#0f2742;margin:0 0 22px;">Understanding fabric weight: a buyer’s guide to GSM in woven garments</h1>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:#1862ab;margin-bottom:16px;">Construction · Guide</div>
+      <h1 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(32px,4.4vw,50px);line-height:1.08;letter-spacing:-.5px;color:#0f2742;margin:0 0 22px;">Single-needle tailoring: a quiet mark of a better shirt</h1>
       <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#8190a0;letter-spacing:.3px;border-bottom:1px solid #eef3f8;padding-bottom:28px;">
-        <span>By Jains Internationnal</span><span style="color:#cdd9e4;">·</span><span>24 June 2026</span><span style="color:#cdd9e4;">·</span><span>6 min read</span>
+        <span>By Jains Internationnal</span><span style="color:#cdd9e4;">·</span><span>18 July 2026</span><span style="color:#cdd9e4;">·</span><span>6 min read</span>
       </div>
     </div>
 
-    <!-- hero image -->
     <div style="max-width:980px;margin:34px auto 0;padding:0 32px;">
-      <image-slot id="art-gsm-hero" fit="cover" src="../assets/gsm-cover.png" placeholder="Hero image — fabric rolls / weighing fabric / shirting close-up" style="width:100%;aspect-ratio:16/9;height:auto;display:block;background:#eef4fa;border-radius:16px;"></image-slot>
+      <image-slot id="art-singleneedle-hero" fit="cover" placeholder="Hero image — shirt side seam / armhole topstitch detail" style="width:100%;aspect-ratio:16/9;height:auto;display:block;background:#eef4fa;border-radius:16px;"></image-slot>
     </div>
 
-    <!-- body -->
     <div style="max-width:760px;margin:0 auto;padding:48px 32px 0;">
+      <p style="font-size:19.5px;line-height:1.7;color:#2c3c4c;"><strong>"Single-needle tailoring" appears on the hangtags of better shirts — and it's not just marketing.</strong> It describes a slower, more demanding way of sewing seams that produces a cleaner, flatter, longer-lasting result. Here's what it actually means.</p>
 
-      <p style="font-size:19.5px;line-height:1.7;color:#2c3c4c;"><strong>If you only learn one fabric spec before developing a woven program, make it GSM.</strong> It tells you more about how a shirt or dress will look, feel, drape and wear than almost any other single number — and it’s the spec most often left vague on a tech pack.</p>
+      <h2>What single-needle means</h2>
+      <p>Many seams that show two parallel rows of stitching — like a shirt's side seam or armhole — can be sewn two ways. A <strong>twin-needle</strong> machine lays both rows at once in a single pass: fast and cheap. <strong>Single-needle</strong> tailoring sews each row separately, one pass at a time, with one needle.</p>
+      <p>It sounds like a small distinction. In the finished shirt it isn't.</p>
 
-      <h2>What GSM actually means</h2>
-      <p>GSM stands for <strong>grams per square metre</strong> — the weight of one square metre of a fabric. A poplin at 110 GSM is light and crisp; a twill at 280 GSM is substantial and structured. Because it’s a weight per fixed area, GSM lets you compare two fabrics fairly even when their construction, yarn and weave are different.</p>
-      <p>It’s a more reliable signal than <strong>thread count</strong>, which can be inflated by counting plied yarns twice and says little about hand or durability. Two fabrics with the same thread count can feel completely different; their GSM usually won’t lie.</p>
-
-      <h2>Typical weight ranges for woven garments</h2>
-      <p>These are working ranges we use for shirting, dresses and bottoms. They’re guides, not rules — finish, weave and fibre all shift how a given weight behaves.</p>
-
-      <div class="spec" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 28px;">
-        <div style="border:1px solid #e6eef6;border-radius:12px;padding:20px 22px;background:#f8fbfe;">
-          <div style="font-family:'Spectral',serif;font-size:19px;font-weight:600;color:#0f2742;margin-bottom:4px;">90–120 GSM</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;margin-bottom:8px;">Lightweight</div>
-          <p style="font-size:14.5px;line-height:1.55;color:#54677a;margin:0;">Summer shirting, voiles, soft dresses. Breathable and fluid, but shows construction faults easily.</p>
-        </div>
-        <div style="border:1px solid #e6eef6;border-radius:12px;padding:20px 22px;background:#f8fbfe;">
-          <div style="font-family:'Spectral',serif;font-size:19px;font-weight:600;color:#0f2742;margin-bottom:4px;">120–170 GSM</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;margin-bottom:8px;">Mid-weight</div>
-          <p style="font-size:14.5px;line-height:1.55;color:#54677a;margin:0;">The everyday sweet spot for formal and casual shirts — enough body to hold a collar, still comfortable.</p>
-        </div>
-        <div style="border:1px solid #e6eef6;border-radius:12px;padding:20px 22px;background:#f8fbfe;">
-          <div style="font-family:'Spectral',serif;font-size:19px;font-weight:600;color:#0f2742;margin-bottom:4px;">170–230 GSM</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;margin-bottom:8px;">Heavy shirting / light bottoms</div>
-          <p style="font-size:14.5px;line-height:1.55;color:#54677a;margin:0;">Overshirts, flannels, lighter trousers and shorts. Structured, opaque, holds its shape.</p>
-        </div>
-        <div style="border:1px solid #e6eef6;border-radius:12px;padding:20px 22px;background:#f8fbfe;">
-          <div style="font-family:'Spectral',serif;font-size:19px;font-weight:600;color:#0f2742;margin-bottom:4px;">230–320 GSM</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;margin-bottom:8px;">Bottom-weight</div>
-          <p style="font-size:14.5px;line-height:1.55;color:#54677a;margin:0;">Chinos, cargo shorts, twill trousers and structured dresses. Durable and stable through wash and wear.</p>
-        </div>
-      </div>
-
-      <h2>Why the same GSM can feel different</h2>
-      <p>Weight is the headline, but three things change how it reads on the body:</p>
+      <h2>Why two passes beat one</h2>
+      <p>Sewing the rows independently lets the operator control the fabric on each pass, so the seam comes out <strong>flatter and straighter with far less puckering</strong> — especially on fine, tightly woven shirting where a twin-needle pass tends to gather the cloth between the rows. The result holds its shape better through wash and wear.</p>
       <ul>
-        <li><strong>Weave.</strong> A 150 GSM poplin feels crisper than a 150 GSM twill of the same yarn, because the weave changes drape and surface.</li>
-        <li><strong>Fibre.</strong> Linen and viscose hang heavier and softer than cotton at the same weight; a polyester blend feels firmer.</li>
-        <li><strong>Finish.</strong> Enzyme washing, peaching and calendering all alter the hand without changing GSM much — so always judge a finished, washed swatch, not greige cloth.</li>
+        <li><strong>Cleaner line.</strong> Each row is laid true, so seams stay flat instead of rippling.</li>
+        <li><strong>Less pucker.</strong> The fabric isn't fought into two rows simultaneously, the main cause of seam pucker on fine cloth.</li>
+        <li><strong>Durability.</strong> A flatter, better-tensioned seam takes stress more evenly and lasts longer.</li>
+        <li><strong>It costs more.</strong> Two operations instead of one means more time and skill — which is why it signals quality.</li>
       </ul>
 
-      <!-- pull quote -->
-      <blockquote style="margin:40px 0;padding:24px 0 24px 28px;border-left:3px solid #1862ab;">
-        <p style="font-family:'Spectral',serif;font-style:italic;font-size:22px;line-height:1.45;color:#0f2742;margin:0;">Specify a GSM <em>and</em> a tolerance. “160 GSM ± 5%” removes the single most common source of bulk-vs-sample disappointment.</p>
+            <blockquote style="margin:40px 0;padding:24px 0 24px 28px;border-left:3px solid #1862ab;">
+        <p style="font-family:'Spectral',serif;font-style:italic;font-size:22px;line-height:1.45;color:#0f2742;margin:0;">Twin-needle sews both rows in one pass to save time. Single-needle sews them one at a time to save the seam.</p>
       </blockquote>
 
-      <h2>How to choose the right weight</h2>
-      <p>Work backwards from the garment’s job:</p>
-      <ul>
-        <li><strong>Market &amp; climate.</strong> A shirt for a Gulf summer wants 110–130 GSM; the same style for European autumn might sit at 150–170.</li>
-        <li><strong>Price point.</strong> Heavier cloth uses more yarn and usually costs more per metre — weight is a real lever on landed cost, not just feel.</li>
-        <li><strong>Construction.</strong> Lighter fabrics demand cleaner sewing; faults hide in heavier, textured cloth. Match your weight to the finishing standard you can hold.</li>
-        <li><strong>Drape vs structure.</strong> Decide whether the style should flow or hold a shape, then pick the weight that gets you there — and confirm it on a sewn sample, not a swatch.</li>
-      </ul>
+      <h2>Where you'll see it</h2>
+      <p>On a true single-needle dress shirt, look at the <strong>side seams, armholes (sleeve-to-body), yokes and the edges of the collar and cuffs</strong>. These are the seams that show and that take stress, so they're where the extra care pays off most. Many shirts mix approaches — single-needle on the visible body seams, faster methods on the inside.</p>
+
+      <h2>How to spot it</h2>
+      <p>Turn the shirt inside out and study a side seam. Single-needle work shows two <strong>genuinely separate, parallel, flat rows</strong>, the seam lying smooth with no puckering between them. Twin-needle seams often show a faint gather between the two rows and a slightly raised channel. Once you've seen the difference, it's hard to unsee.</p>
+
+      <h2>Is it always worth it?</h2>
+      <p>For formal and premium shirting, yes — it's a visible, durable quality the customer can feel. For heavy casual or workwear, twin-needle is perfectly correct and often the right choice for the look and price. As with most construction, single-needle isn't "better" in the abstract; it's better <em>for the right garment</em>.</p>
 
       <h2>What to put on your tech pack</h2>
-      <p>For every woven style, we ask buyers to lock four things up front: <strong>GSM with tolerance</strong>, <strong>weave</strong> (poplin, twill, dobby, oxford…), <strong>fibre composition</strong>, and the <strong>finish</strong>. With those four fixed, sampling moves faster and bulk matches the approved sample far more reliably.</p>
+      <p>If you want single-needle, say so explicitly and name the seams — "single-needle side seams and armholes" — because the default on many lines is twin-needle for speed. Pair it with your target SPI and it becomes a clear, checkable standard rather than a hopeful phrase on a hangtag.</p>
+
 
       <!-- CTA -->
       <div style="margin:52px 0 8px;background:#f5f9fd;border:1px solid #e3ebf3;border-radius:16px;padding:32px 34px;">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#1862ab;margin-bottom:10px;">Developing a woven program?</div>
-        <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:23px;color:#0f2742;margin:0 0 10px;">Send us your tech pack — we’ll advise on weight and construction.</h3>
-        <p style="font-size:15.5px;line-height:1.6;color:#54677a;margin:0 0 20px;">Our team in Salem will recommend the right fabric weight for your style, market and price point, and sample against it.</p>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#1862ab;margin-bottom:10px;">Building a premium shirt?</div>
+        <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:23px;color:#0f2742;margin:0 0 10px;">We sew single-needle where it counts — cleanly, without puckering.</h3>
+        <p style="font-size:15.5px;line-height:1.6;color:#54677a;margin:0 0 20px;">Our team in Salem runs single-needle construction on dress shirts and elevated casual styles. Tell us the quality level you're after and we'll build to it.</p>
         <a href="../index.html#contact" style="text-decoration:none;display:inline-flex;align-items:center;gap:9px;background:#1862ab;color:#fff;font-weight:600;font-size:15px;padding:13px 26px;border-radius:999px;box-shadow:0 10px 24px -12px rgba(24,98,171,.65);">Get in touch →</a>
       </div>
-
     </div>
   </article>
 
-  <!-- back link -->
   <div style="max-width:760px;margin:0 auto;padding:40px 32px 0;">
     <a href="index.html" style="text-decoration:none;color:#1862ab;font-weight:600;font-size:15px;">← Back to all insights</a>
   </div>
