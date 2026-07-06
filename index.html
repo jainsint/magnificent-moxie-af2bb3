@@ -36,6 +36,9 @@
   body{margin:0;background:#ffffff;}
   ::selection{background:#cfe2f5;color:var(--ji-ink,#0f2742);}
   @keyframes jiFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
+  .ji-range{-webkit-appearance:none;appearance:none;height:6px;border-radius:999px;outline:none;cursor:pointer;}
+  .ji-range::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:var(--ji-ink,#0f2742);border:3px solid #fff;box-shadow:0 2px 7px rgba(15,39,66,.4);cursor:pointer;}
+  .ji-range::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--ji-ink,#0f2742);border:3px solid #fff;box-shadow:0 2px 7px rgba(15,39,66,.4);cursor:pointer;}
   image-slot{--ph-bg:var(--ji-soft,#eef4fa);}
   /* Every catalogue product photo sits on one uniform square tile with the
      same neutral backdrop, so a contain letterbox always reads as an
@@ -244,6 +247,7 @@
         <a href="#catalogue" style="text-decoration:none;color:#42566a;font-size:14.5px;font-weight:500;letter-spacing:.2px;">Catalogue</a>
         <a href="#factory" style="text-decoration:none;color:#42566a;font-size:14.5px;font-weight:500;letter-spacing:.2px;white-space:nowrap;">Inside the Floor</a>
         <a href="#insights" style="text-decoration:none;color:#42566a;font-size:14.5px;font-weight:500;letter-spacing:.2px;">Insights</a>
+        <a href="#builder" style="text-decoration:none;color:#42566a;font-size:14.5px;font-weight:500;letter-spacing:.2px;white-space:nowrap;">Start a project</a>
         <a href="#contact" style="text-decoration:none;background:var(--ji-ink,#0f2742);color:#fff;font-size:14px;font-weight:600;padding:10px 20px;border-radius:999px;letter-spacing:.2px;white-space:nowrap;">Get in touch</a>
       </nav>
     </div>
@@ -253,6 +257,7 @@
       <a href="#catalogue" style="padding:15px 32px;text-decoration:none;color:#21303f;font-size:16px;font-weight:500;border-top:1px solid #f1f5fa;">Catalogue</a>
       <a href="#factory" style="padding:15px 32px;text-decoration:none;color:#21303f;font-size:16px;font-weight:500;border-top:1px solid #f1f5fa;">Inside the Floor</a>
       <a href="#insights" style="padding:15px 32px;text-decoration:none;color:#21303f;font-size:16px;font-weight:500;border-top:1px solid #f1f5fa;">Insights</a>
+      <a href="#builder" style="padding:15px 32px;text-decoration:none;color:#21303f;font-size:16px;font-weight:500;border-top:1px solid #f1f5fa;">Start a project</a>
     </div>
   </header>
 
@@ -627,6 +632,94 @@
     </div>
   </section>
 
+  <!-- ===== REQUIREMENT BUILDER ===== -->
+  <section id="builder" style="background:#fff;border-top:1px solid #eef3f8;">
+    <div style="max-width:1200px;margin:0 auto;padding:104px 32px;" data-r="pad">
+      <div data-reveal="" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);max-width:660px;margin:0 auto 46px;text-align:center;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2px;color:var(--ji-accent,#1862ab);text-transform:uppercase;margin-bottom:18px;">Start a project</div>
+        <h2 style="font-family:var(--ji-head,'Spectral'),serif;font-weight:500;font-size:clamp(28px,3vw,40px);line-height:1.1;letter-spacing:-.4px;color:var(--ji-ink,#0f2742);margin:0 0 14px;">Build your requirement in a minute.</h2>
+        <p style="font-size:16.5px;line-height:1.65;color:#54677a;margin:0;">Tell us what you're producing and how to reach you — our team comes back with sampling, MOQ and a production plan.</p>
+      </div>
+
+      <div data-reveal="" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1) .1s,transform .9s cubic-bezier(.16,1,.3,1) .1s;max-width:860px;margin:0 auto;background:#fff;border:1px solid #e3ebf3;border-radius:20px;padding:40px 42px;box-shadow:0 24px 60px -34px rgba(15,39,66,.35);">
+
+        <!-- Category -->
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:#8190a0;text-transform:uppercase;margin-bottom:12px;">Garment category</div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;">
+          <button type="button" data-group="cat" data-value="Menswear" onClick="{{ onChip }}" style="border:1px solid var(--ji-ink,#0f2742);background:var(--ji-ink,#0f2742);color:#fff;cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Menswear</button>
+          <button type="button" data-group="cat" data-value="Womenswear" onClick="{{ onChip }}" style="border:1px solid #d3e0ee;background:#fff;color:var(--ji-ink,#0f2742);cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Womenswear</button>
+          <button type="button" data-group="cat" data-value="Kids" onClick="{{ onChip }}" style="border:1px solid #d3e0ee;background:#fff;color:var(--ji-ink,#0f2742);cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Kids</button>
+          <button type="button" data-group="cat" data-value="Other woven garment" onClick="{{ onChip }}" style="border:1px solid #d3e0ee;background:#fff;color:var(--ji-ink,#0f2742);cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Other woven garment</button>
+        </div>
+
+        <!-- Garment type -->
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:#8190a0;text-transform:uppercase;margin-bottom:12px;">Product type</div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;">
+          <button type="button" data-group="type" data-value="Shirts" onClick="{{ onChip }}" style="border:1px solid var(--ji-ink,#0f2742);background:var(--ji-ink,#0f2742);color:#fff;cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Shirts</button>
+          <button type="button" data-group="type" data-value="Pants" onClick="{{ onChip }}" style="border:1px solid #d3e0ee;background:#fff;color:var(--ji-ink,#0f2742);cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Pants</button>
+          <button type="button" data-group="type" data-value="Dresses" onClick="{{ onChip }}" style="border:1px solid #d3e0ee;background:#fff;color:var(--ji-ink,#0f2742);cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Dresses</button>
+          <button type="button" data-group="type" data-value="Shorts" onClick="{{ onChip }}" style="border:1px solid #d3e0ee;background:#fff;color:var(--ji-ink,#0f2742);cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Shorts</button>
+          <button type="button" data-group="type" data-value="Other style" onClick="{{ onChip }}" style="border:1px solid #d3e0ee;background:#fff;color:var(--ji-ink,#0f2742);cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Other style</button>
+        </div>
+
+        <!-- Order volume -->
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:#8190a0;text-transform:uppercase;margin-bottom:12px;">Order volume</div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px;">
+          <button type="button" data-group="volume" data-value="Sample / development" onClick="{{ onChip }}" style="border:1px solid #d3e0ee;background:#fff;color:var(--ji-ink,#0f2742);cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Sample / development</button>
+          <button type="button" data-group="volume" data-value="500 – 2,000 pcs" onClick="{{ onChip }}" style="border:1px solid var(--ji-ink,#0f2742);background:var(--ji-ink,#0f2742);color:#fff;cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">500 – 2,000 pcs</button>
+          <button type="button" data-group="volume" data-value="2,000 – 5,000 pcs" onClick="{{ onChip }}" style="border:1px solid #d3e0ee;background:#fff;color:var(--ji-ink,#0f2742);cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">2,000 – 5,000 pcs</button>
+          <button type="button" data-group="volume" data-value="5,000+ pcs" onClick="{{ onChip }}" style="border:1px solid #d3e0ee;background:#fff;color:var(--ji-ink,#0f2742);cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">5,000+ pcs</button>
+        </div>
+
+        <div style="height:1px;background:#eef3f8;margin-bottom:30px;"></div>
+
+        <!-- Buyer info -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;" data-r="stack">
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:#8190a0;text-transform:uppercase;margin-bottom:8px;">Your name</div>
+            <input id="ji-name" type="text" placeholder="Full name" style="width:100%;border:1px solid #dce5ef;border-radius:12px;padding:14px 16px;font-size:15px;font-family:inherit;color:#21303f;background:#fff;outline:none;" style-focus="border:1px solid var(--ji-accent,#1862ab);" />
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:#8190a0;text-transform:uppercase;margin-bottom:8px;">Company / brand</div>
+            <input id="ji-company" type="text" placeholder="Company name" style="width:100%;border:1px solid #dce5ef;border-radius:12px;padding:14px 16px;font-size:15px;font-family:inherit;color:#21303f;background:#fff;outline:none;" style-focus="border:1px solid var(--ji-accent,#1862ab);" />
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:26px;" data-r="stack">
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:#8190a0;text-transform:uppercase;margin-bottom:8px;">Phone / WhatsApp</div>
+            <div style="display:flex;align-items:stretch;border:1px solid #dce5ef;border-radius:12px;overflow:hidden;">
+              <span style="display:inline-flex;align-items:center;padding:0 14px;background:#f2f6fb;border-right:1px solid #dce5ef;font-size:15px;color:#42566a;font-weight:600;">+91</span>
+              <input id="ji-phone" type="tel" placeholder="Mobile number" style="flex:1;border:none;padding:14px 16px;font-size:15px;font-family:inherit;color:#21303f;background:#fff;outline:none;" />
+            </div>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:#8190a0;text-transform:uppercase;margin-bottom:8px;">Email</div>
+            <input id="ji-buyer-email" type="email" placeholder="you@company.com" style="width:100%;border:1px solid #dce5ef;border-radius:12px;padding:14px 16px;font-size:15px;font-family:inherit;color:#21303f;background:#fff;outline:none;" style-focus="border:1px solid var(--ji-accent,#1862ab);" />
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;">
+          <button type="button" onClick="{{ onSend }}" style="display:inline-flex;align-items:center;gap:10px;border:none;cursor:pointer;background:var(--ji-accent,#1862ab);color:#fff;font-family:inherit;font-weight:600;font-size:15px;padding:15px 30px;border-radius:999px;box-shadow:0 12px 26px -12px rgba(24,98,171,.65);transition:all .2s;">
+            <span style="width:16px;height:16px;background:#fff;transform:rotate(45deg);border-radius:2px;opacity:.9;"></span>
+            Send requirement on WhatsApp
+          </button>
+          <a id="ji-builder-email" href="#" onMouseDown="{{ onEmailLink }}" onClick="{{ onEmailLink }}" style="text-decoration:none;color:var(--ji-accent,#1862ab);font-weight:600;font-size:14.5px;">or email the details instead →</a>
+          <span id="ji-form-err" style="display:none;color:#c0392b;font-size:14px;font-weight:500;"></span>
+        </div>
+
+        <div id="ji-send-note" style="display:none;margin-top:20px;padding:14px 18px;background:var(--ji-soft,#eaf2fb);border:1px solid #dbe7f4;border-radius:12px;font-size:14.5px;color:#2c3e51;line-height:1.5;"></div>
+
+        <!-- Disclaimer -->
+        <div style="margin-top:26px;padding-top:24px;border-top:1px solid #eef3f8;display:flex;gap:12px;align-items:flex-start;">
+          <span style="width:8px;height:8px;background:var(--ji-accent,#1862ab);transform:rotate(45deg);flex:none;margin-top:6px;"></span>
+          <p style="margin:0;font-size:14px;line-height:1.6;color:#6a7d90;">The categories above are a starting point, not a limit. With a proper tech pack, we can engage in manufacturing virtually any woven garment — as long as it's technically feasible on our floor. Share your specs and we'll advise on sampling and production.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ===== CONTACT ===== -->
   <section id="contact" style="background:#f5f9fd;border-top:1px solid #e7eef5;">
     <div data-r="stack" style="max-width:1200px;margin:0 auto;padding:104px 32px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
@@ -719,12 +812,80 @@ class Component extends DCLogic {
     window.__jiMotion = mot;
   }
 
-  componentDidMount() { this.applyTheme(); }
+  componentDidMount() { this.applyTheme(); this.syncBuilderEmail(); }
   componentDidUpdate() { this.applyTheme(); }
 
   $all(sel) {
     const scope = this.root || document;
     return Array.from(scope.querySelectorAll(sel));
+  }
+
+  // Requirement-builder selections live outside React state so uncontrolled
+  // inputs and chip styling never get wiped by a re-render.
+  builderSel = { cat: 'Menswear', type: 'Shirts', volume: '500 – 2,000 pcs' };
+
+  styleGroup(group, value) {
+    this.$all('[data-group="' + group + '"]').forEach((b) => {
+      const on = b.dataset.value === value;
+      b.style.border = on ? '1px solid var(--ji-ink,#0f2742)' : '1px solid #d3e0ee';
+      b.style.background = on ? 'var(--ji-ink,#0f2742)' : '#fff';
+      b.style.color = on ? '#fff' : 'var(--ji-ink,#0f2742)';
+    });
+  }
+
+  buildSummary() {
+    const s = this.builderSel;
+    const scope = this.root || document;
+    const val = (id) => { const el = scope.querySelector('#' + id); return el ? el.value.trim() : ''; };
+    return {
+      name: val('ji-name'), company: val('ji-company'),
+      phone: val('ji-phone'), email: val('ji-buyer-email'),
+      cat: s.cat, type: s.type, volume: s.volume,
+    };
+  }
+
+  buildMessage() {
+    const d = this.buildSummary();
+    const lines = [
+      'Hi Jains Internationnal \u2014 I\u2019d like to enquire about a production run.',
+      '',
+      'Category: ' + d.cat,
+      'Product: ' + d.type,
+      'Order volume: ' + d.volume,
+      '',
+      'Name: ' + (d.name || '\u2014'),
+      'Company: ' + (d.company || '\u2014'),
+      'Phone: ' + (d.phone ? '+91 ' + d.phone : '\u2014'),
+      'Email: ' + (d.email || '\u2014'),
+    ];
+    return { text: lines.join('\n'), data: d };
+  }
+
+  onSend() {
+    const scope = this.root || document;
+    const err = scope.querySelector('#ji-form-err');
+    const note = scope.querySelector('#ji-send-note');
+    const { text, data } = this.buildMessage();
+    if (!data.name || (!data.phone && !data.email)) {
+      if (err) { err.style.display = 'inline'; err.textContent = 'Add your name and a phone or email.'; }
+      return;
+    }
+    if (err) err.style.display = 'none';
+    const url = 'https://wa.me/917708668714?text=' + encodeURIComponent(text);
+    window.open(url, '_blank', 'noopener');
+    if (note) {
+      note.style.display = 'block';
+      note.textContent = 'Thanks ' + data.name + ' \u2014 your requirement is ready to send on WhatsApp. If the chat didn\u2019t open, use \u201Cemail the details instead\u201D above and our team will reach out.';
+    }
+  }
+
+  syncBuilderEmail() {
+    const scope = this.root || document;
+    const link = scope.querySelector('#ji-builder-email');
+    if (!link) return;
+    const { text } = this.buildMessage();
+    const addr = 'dhruv' + String.fromCharCode(64) + 'jainsint.com';
+    link.setAttribute('href', 'mailto:' + addr + '?subject=' + encodeURIComponent('Production enquiry \u2014 Jains Internationnal') + '&body=' + encodeURIComponent(text));
   }
 
   filter(cat) {
@@ -746,6 +907,15 @@ class Component extends DCLogic {
       fMen: () => this.filter('men'),
       fWomen: () => this.filter('women'),
       fKids: () => this.filter('kids'),
+      onChip: (e) => {
+        const b = e.currentTarget;
+        const g = b.dataset.group, v = b.dataset.value;
+        this.builderSel[g] = v;
+        this.styleGroup(g, v);
+        this.syncBuilderEmail();
+      },
+      onSend: () => this.onSend(),
+      onEmailLink: () => this.syncBuilderEmail(),
     };
   }
 }
