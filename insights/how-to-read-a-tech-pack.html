@@ -11,8 +11,8 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Understanding Fabric Weight (GSM) — Insights · Jains Internationnal</title>
-<meta name="description" content="A buyer's guide to GSM in woven garments: what fabric weight means, typical ranges for shirts and dresses, and how to choose the right weight for your market and season.">
+<title>How to Read and Write a Tech Pack — Insights · Jains Internationnal</title>
+<meta name="description" content="What goes into a garment tech pack, section by section, and the gaps that cause sampling failures. A practical buyer's guide.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -28,12 +28,20 @@
   .art li{position:relative;padding-left:26px;font-size:17px;line-height:1.65;color:#3d4f60;margin-bottom:12px;}
   .art li::before{content:"";position:absolute;left:2px;top:10px;width:8px;height:8px;background:#1862ab;transform:rotate(45deg);}
   .art strong{color:#21303f;font-weight:600;}
+  .ctab{width:100%;border-collapse:collapse;margin:8px 0 28px;font-size:15px;}
+  .ctab th,.ctab td{text-align:left;padding:13px 16px;border-bottom:1px solid #e6eef6;vertical-align:top;}
+  .ctab th{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;font-weight:500;}
+  .ctab td{color:#3d4f60;}
+  .ctab td:first-child{font-family:'Spectral',serif;color:#0f2742;font-weight:600;font-size:16px;}
+  .ctab tr:last-child td{border-bottom:none;}
   @media (max-width:768px){
     .ji-nav a:not(.ji-cta){display:none;}
     .ji-burger{display:flex !important;}
     header[data-menu-open] .ji-mobnav{display:flex !important;}
     .ji-foot{flex-direction:column;align-items:flex-start !important;gap:24px !important;}
     .spec{grid-template-columns:1fr !important;}
+    .ctab{font-size:13.5px;}
+    .ctab th,.ctab td{padding:10px 11px;}
   }
   .ji-burger{display:none;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid #d8e3ef;border-radius:10px;background:#fff;cursor:pointer;padding:0;order:2;-webkit-tap-highlight-color:rgba(24,98,171,.12);}
   .ji-burger span{position:relative;display:block;width:18px;height:2px;background:#0f2742;border-radius:2px;transition:transform .2s,top .2s,background .2s;}
@@ -80,94 +88,81 @@
 
   <!-- ARTICLE -->
   <article class="art">
-
-    <!-- title block -->
     <div style="max-width:760px;margin:0 auto;padding:64px 32px 0;">
       <a href="index.html" style="text-decoration:none;color:#1862ab;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.5px;display:inline-flex;align-items:center;gap:7px;margin-bottom:26px;">← All insights</a>
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:#1862ab;margin-bottom:16px;">Fabric · Guide</div>
-      <h1 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(32px,4.4vw,50px);line-height:1.08;letter-spacing:-.5px;color:#0f2742;margin:0 0 22px;">Understanding fabric weight: a buyer’s guide to GSM in woven garments</h1>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:#1862ab;margin-bottom:16px;">Sourcing · Guide</div>
+      <h1 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(32px,4.4vw,50px);line-height:1.08;letter-spacing:-.5px;color:#0f2742;margin:0 0 22px;">How to read (and write) a tech pack that actually works</h1>
       <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#8190a0;letter-spacing:.3px;border-bottom:1px solid #eef3f8;padding-bottom:28px;">
-        <span>By Jains Internationnal</span><span style="color:#cdd9e4;">·</span><span>24 June 2026</span><span style="color:#cdd9e4;">·</span><span>6 min read</span>
+        <span>By Jains Internationnal</span><span style="color:#cdd9e4;">·</span><span>8 August 2026</span><span style="color:#cdd9e4;">·</span><span>9 min read</span>
       </div>
     </div>
 
-    <!-- hero image -->
     <div style="max-width:980px;margin:34px auto 0;padding:0 32px;">
-      <image-slot id="art-gsm-hero" fit="cover" src="../assets/gsm-cover.png" placeholder="Hero image — fabric rolls / weighing fabric / shirting close-up" style="width:100%;aspect-ratio:16/9;height:auto;display:block;background:#eef4fa;border-radius:16px;"></image-slot>
+      <image-slot id="art-techpack-hero" fit="cover" placeholder="Hero image — tech pack spec sheet / flat sketch on a desk" style="width:100%;aspect-ratio:16/9;height:auto;display:block;background:#eef4fa;border-radius:16px;"></image-slot>
     </div>
 
-    <!-- body -->
     <div style="max-width:760px;margin:0 auto;padding:48px 32px 0;">
+      <p style="font-size:19.5px;line-height:1.7;color:#2c3c4c;"><strong>The tech pack is the contract between your idea and the factory's hands.</strong> A clear one gets you a first sample that's close and a bulk run that matches. A vague one gets you guesswork, rounds of corrections, and a production lot that drifts from what you approved. It's the most important document in the whole process.</p>
+      <p style="font-size:17.5px;line-height:1.75;color:#3d4f60;margin:0 0 20px;">Here's what a complete one contains, and where they usually fall short.</p>
 
-      <p style="font-size:19.5px;line-height:1.7;color:#2c3c4c;"><strong>If you only learn one fabric spec before developing a woven program, make it GSM.</strong> It tells you more about how a shirt or dress will look, feel, drape and wear than almost any other single number — and it’s the spec most often left vague on a tech pack.</p>
+      <h2>What a tech pack is</h2>
+      <p>A tech pack (technical package) is the full set of specifications a factory needs to develop and produce a garment. It's not a mood board or a sketch — it's a precise, measurable brief covering everything from fabric to stitch to fold. Think of every gap in it as a decision you've handed to someone who's never met your customer.</p>
 
-      <h2>What GSM actually means</h2>
-      <p>GSM stands for <strong>grams per square metre</strong> — the weight of one square metre of a fabric. A poplin at 110 GSM is light and crisp; a twill at 280 GSM is substantial and structured. Because it’s a weight per fixed area, GSM lets you compare two fabrics fairly even when their construction, yarn and weave are different.</p>
-      <p>It’s a more reliable signal than <strong>thread count</strong>, which can be inflated by counting plied yarns twice and says little about hand or durability. Two fabrics with the same thread count can feel completely different; their GSM usually won’t lie.</p>
-
-      <h2>Typical weight ranges for woven garments</h2>
-      <p>These are working ranges we use for shirting, dresses and bottoms. They’re guides, not rules — finish, weave and fibre all shift how a given weight behaves.</p>
-
-      <div class="spec" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 28px;">
-        <div style="border:1px solid #e6eef6;border-radius:12px;padding:20px 22px;background:#f8fbfe;">
-          <div style="font-family:'Spectral',serif;font-size:19px;font-weight:600;color:#0f2742;margin-bottom:4px;">90–120 GSM</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;margin-bottom:8px;">Lightweight</div>
-          <p style="font-size:14.5px;line-height:1.55;color:#54677a;margin:0;">Summer shirting, voiles, soft dresses. Breathable and fluid, but shows construction faults easily.</p>
-        </div>
-        <div style="border:1px solid #e6eef6;border-radius:12px;padding:20px 22px;background:#f8fbfe;">
-          <div style="font-family:'Spectral',serif;font-size:19px;font-weight:600;color:#0f2742;margin-bottom:4px;">120–170 GSM</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;margin-bottom:8px;">Mid-weight</div>
-          <p style="font-size:14.5px;line-height:1.55;color:#54677a;margin:0;">The everyday sweet spot for formal and casual shirts — enough body to hold a collar, still comfortable.</p>
-        </div>
-        <div style="border:1px solid #e6eef6;border-radius:12px;padding:20px 22px;background:#f8fbfe;">
-          <div style="font-family:'Spectral',serif;font-size:19px;font-weight:600;color:#0f2742;margin-bottom:4px;">170–230 GSM</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;margin-bottom:8px;">Heavy shirting / light bottoms</div>
-          <p style="font-size:14.5px;line-height:1.55;color:#54677a;margin:0;">Overshirts, flannels, lighter trousers and shorts. Structured, opaque, holds its shape.</p>
-        </div>
-        <div style="border:1px solid #e6eef6;border-radius:12px;padding:20px 22px;background:#f8fbfe;">
-          <div style="font-family:'Spectral',serif;font-size:19px;font-weight:600;color:#0f2742;margin-bottom:4px;">230–320 GSM</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;margin-bottom:8px;">Bottom-weight</div>
-          <p style="font-size:14.5px;line-height:1.55;color:#54677a;margin:0;">Chinos, cargo shorts, twill trousers and structured dresses. Durable and stable through wash and wear.</p>
-        </div>
-      </div>
-
-      <h2>Why the same GSM can feel different</h2>
-      <p>Weight is the headline, but three things change how it reads on the body:</p>
+      <h2>The sections that matter</h2>
+      <p>Formats vary, but a complete tech pack covers these:</p>
       <ul>
-        <li><strong>Weave.</strong> A 150 GSM poplin feels crisper than a 150 GSM twill of the same yarn, because the weave changes drape and surface.</li>
-        <li><strong>Fibre.</strong> Linen and viscose hang heavier and softer than cotton at the same weight; a polyester blend feels firmer.</li>
-        <li><strong>Finish.</strong> Enzyme washing, peaching and calendering all alter the hand without changing GSM much — so always judge a finished, washed swatch, not greige cloth.</li>
+        <li><strong>Flat sketch &amp; callouts.</strong> Technical front/back drawings with arrows naming every seam, topstitch, pocket and detail. The visual spine everything else hangs off.</li>
+        <li><strong>Bill of materials (BOM).</strong> Every component — fabric, thread, buttons, labels, interlining, trims — with supplier, colour and placement. Miss one and sampling stalls.</li>
+        <li><strong>Measurements (POM) &amp; grading.</strong> A points-of-measure chart with the spec at each point, tolerances, and the grade rules across the size range.</li>
+        <li><strong>Construction details.</strong> Stitch class, seam class, SPI and where each is used — the build instructions. (See our guides on <a href="types-of-stitches-and-seams.html" style="color:#1862ab;">stitches and seams</a> and <a href="stitches-per-inch-spi.html" style="color:#1862ab;">SPI</a>.)</li>
+        <li><strong>Fabric &amp; finish.</strong> Composition, weave, GSM with tolerance and finish — anchored to a target, not a word. (See <a href="understanding-fabric-weight-gsm.html" style="color:#1862ab;">fabric weight</a> and <a href="types-of-weave-plain-twill-satin.html" style="color:#1862ab;">weave</a>.)</li>
+        <li><strong>Colourways &amp; artwork.</strong> Approved colour standards (a physical or Pantone reference), plus any prints or embroidery with placement and size.</li>
+        <li><strong>Labels &amp; packaging.</strong> Brand, care and size labels, hangtags, polybag, folding and carton specs — the details that get forgotten and hold up shipping.</li>
       </ul>
 
-      <!-- pull quote -->
-      <blockquote style="margin:40px 0;padding:24px 0 24px 28px;border-left:3px solid #1862ab;">
-        <p style="font-family:'Spectral',serif;font-style:italic;font-size:22px;line-height:1.45;color:#0f2742;margin:0;">Specify a GSM <em>and</em> a tolerance. “160 GSM ± 5%” removes the single most common source of bulk-vs-sample disappointment.</p>
+            <blockquote style="margin:40px 0;padding:24px 0 24px 28px;border-left:3px solid #1862ab;">
+        <p style="font-family:'Spectral',serif;font-style:italic;font-size:22px;line-height:1.45;color:#0f2742;margin:0;">Every blank in a tech pack is a decision you've delegated to the factory. The tighter the spec, the closer the sample — and the fewer the surprises in bulk.</p>
       </blockquote>
 
-      <h2>How to choose the right weight</h2>
-      <p>Work backwards from the garment’s job:</p>
+      <h2>Where tech packs go wrong</h2>
+      <p>Most sampling failures trace back to the same gaps:</p>
       <ul>
-        <li><strong>Market &amp; climate.</strong> A shirt for a Gulf summer wants 110–130 GSM; the same style for European autumn might sit at 150–170.</li>
-        <li><strong>Price point.</strong> Heavier cloth uses more yarn and usually costs more per metre — weight is a real lever on landed cost, not just feel.</li>
-        <li><strong>Construction.</strong> Lighter fabrics demand cleaner sewing; faults hide in heavier, textured cloth. Match your weight to the finishing standard you can hold.</li>
-        <li><strong>Drape vs structure.</strong> Decide whether the style should flow or hold a shape, then pick the weight that gets you there — and confirm it on a sewn sample, not a swatch.</li>
+        <li><strong>No tolerances.</strong> "160 GSM" or a bare measurement with no ± invites a legitimate but disappointing result. Always state the acceptable range.</li>
+        <li><strong>Vague fabric.</strong> "Cotton twill" leaves count, weight and finish open. Pin all four.</li>
+        <li><strong>Loose construction.</strong> "Topstitch hem" without stitch, seam and SPI lets the floor default to whatever's fastest.</li>
+        <li><strong>Missing trims.</strong> Buttons, labels and threads left off the BOM stop a sample before it starts.</li>
+        <li><strong>No colour standard.</strong> "Navy" is not a colour; a referenced standard is.</li>
       </ul>
 
-      <h2>What to put on your tech pack</h2>
-      <p>For every woven style, we ask buyers to lock four things up front: <strong>GSM with tolerance</strong>, <strong>weave</strong> (poplin, twill, dobby, oxford…), <strong>fibre composition</strong>, and the <strong>finish</strong>. With those four fixed, sampling moves faster and bulk matches the approved sample far more reliably.</p>
+      <h2>Tolerances and approval</h2>
+      <p>A spec without a tolerance isn't really a spec. Every critical measurement and fabric property should carry an acceptable range, and the approval process should be explicit: who signs off the sample, against what standard, and what counts as a pass. This is what makes bulk reviewable against a fixed reference rather than an argument.</p>
+
+      <h2>A good tech pack pays for itself</h2>
+      <p>Time spent tightening a tech pack is repaid many times over: <strong>fewer sampling rounds, faster development, accurate costing, and a bulk run that matches the approved sample.</strong> It also protects you — when expectations are written and measurable, quality disputes have a clear reference point instead of two opinions.</p>
+
+      <h2>A quick pre-send checklist</h2>
+      <ul>
+        <li>Flat sketch with every detail called out?</li>
+        <li>Complete BOM — fabric, thread, trims, labels?</li>
+        <li>POM chart with tolerances and grade rules?</li>
+        <li>Stitch, seam and SPI named at each operation?</li>
+        <li>Fabric: composition, weave, GSM ± and finish?</li>
+        <li>Colour standards and artwork placement?</li>
+        <li>Labels, folding and packaging specified?</li>
+      </ul>
+      <p>Tick all seven and you've removed almost every reason a first sample comes back wrong.</p>
+
 
       <!-- CTA -->
       <div style="margin:52px 0 8px;background:#f5f9fd;border:1px solid #e3ebf3;border-radius:16px;padding:32px 34px;">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#1862ab;margin-bottom:10px;">Developing a woven program?</div>
-        <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:23px;color:#0f2742;margin:0 0 10px;">Send us your tech pack — we’ll advise on weight and construction.</h3>
-        <p style="font-size:15.5px;line-height:1.6;color:#54677a;margin:0 0 20px;">Our team in Salem will recommend the right fabric weight for your style, market and price point, and sample against it.</p>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#1862ab;margin-bottom:10px;">Starting a development?</div>
+        <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:23px;color:#0f2742;margin:0 0 10px;">Send us your tech pack — or your idea, and we'll help build one.</h3>
+        <p style="font-size:15.5px;line-height:1.6;color:#54677a;margin:0 0 20px;">Our team in Salem turns tech packs into samples and production every week, and can help you tighten a spec before the first sample is cut. Let's talk.</p>
         <a href="../index.html#contact" style="text-decoration:none;display:inline-flex;align-items:center;gap:9px;background:#1862ab;color:#fff;font-weight:600;font-size:15px;padding:13px 26px;border-radius:999px;box-shadow:0 10px 24px -12px rgba(24,98,171,.65);">Get in touch →</a>
       </div>
-
     </div>
   </article>
 
-  <!-- back link -->
   <div style="max-width:760px;margin:0 auto;padding:40px 32px 0;">
     <a href="index.html" style="text-decoration:none;color:#1862ab;font-weight:600;font-size:15px;">← Back to all insights</a>
   </div>

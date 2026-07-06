@@ -11,8 +11,8 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Understanding Fabric Weight (GSM) — Insights · Jains Internationnal</title>
-<meta name="description" content="A buyer's guide to GSM in woven garments: what fabric weight means, typical ranges for shirts and dresses, and how to choose the right weight for your market and season.">
+<title>Combed vs Carded Cotton, and the Pima/Supima Story — Insights · Jains Internationnal</title>
+<meta name="description" content="How staple length and combing decide cotton quality, and what Pima, Supima and Egyptian cotton actually mean. A buyer's guide to cotton fibre.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -28,12 +28,20 @@
   .art li{position:relative;padding-left:26px;font-size:17px;line-height:1.65;color:#3d4f60;margin-bottom:12px;}
   .art li::before{content:"";position:absolute;left:2px;top:10px;width:8px;height:8px;background:#1862ab;transform:rotate(45deg);}
   .art strong{color:#21303f;font-weight:600;}
+  .ctab{width:100%;border-collapse:collapse;margin:8px 0 28px;font-size:15px;}
+  .ctab th,.ctab td{text-align:left;padding:13px 16px;border-bottom:1px solid #e6eef6;vertical-align:top;}
+  .ctab th{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;font-weight:500;}
+  .ctab td{color:#3d4f60;}
+  .ctab td:first-child{font-family:'Spectral',serif;color:#0f2742;font-weight:600;font-size:16px;}
+  .ctab tr:last-child td{border-bottom:none;}
   @media (max-width:768px){
     .ji-nav a:not(.ji-cta){display:none;}
     .ji-burger{display:flex !important;}
     header[data-menu-open] .ji-mobnav{display:flex !important;}
     .ji-foot{flex-direction:column;align-items:flex-start !important;gap:24px !important;}
     .spec{grid-template-columns:1fr !important;}
+    .ctab{font-size:13.5px;}
+    .ctab th,.ctab td{padding:10px 11px;}
   }
   .ji-burger{display:none;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid #d8e3ef;border-radius:10px;background:#fff;cursor:pointer;padding:0;order:2;-webkit-tap-highlight-color:rgba(24,98,171,.12);}
   .ji-burger span{position:relative;display:block;width:18px;height:2px;background:#0f2742;border-radius:2px;transition:transform .2s,top .2s,background .2s;}
@@ -80,94 +88,82 @@
 
   <!-- ARTICLE -->
   <article class="art">
-
-    <!-- title block -->
     <div style="max-width:760px;margin:0 auto;padding:64px 32px 0;">
       <a href="index.html" style="text-decoration:none;color:#1862ab;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.5px;display:inline-flex;align-items:center;gap:7px;margin-bottom:26px;">← All insights</a>
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:#1862ab;margin-bottom:16px;">Fabric · Guide</div>
-      <h1 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(32px,4.4vw,50px);line-height:1.08;letter-spacing:-.5px;color:#0f2742;margin:0 0 22px;">Understanding fabric weight: a buyer’s guide to GSM in woven garments</h1>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:#1862ab;margin-bottom:16px;">Fibre · Guide</div>
+      <h1 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(32px,4.4vw,50px);line-height:1.08;letter-spacing:-.5px;color:#0f2742;margin:0 0 22px;">Combed vs carded, and the truth about Pima and Egyptian cotton</h1>
       <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#8190a0;letter-spacing:.3px;border-bottom:1px solid #eef3f8;padding-bottom:28px;">
-        <span>By Jains Internationnal</span><span style="color:#cdd9e4;">·</span><span>24 June 2026</span><span style="color:#cdd9e4;">·</span><span>6 min read</span>
+        <span>By Jains Internationnal</span><span style="color:#cdd9e4;">·</span><span>1 August 2026</span><span style="color:#cdd9e4;">·</span><span>8 min read</span>
       </div>
     </div>
 
-    <!-- hero image -->
     <div style="max-width:980px;margin:34px auto 0;padding:0 32px;">
-      <image-slot id="art-gsm-hero" fit="cover" src="../assets/gsm-cover.png" placeholder="Hero image — fabric rolls / weighing fabric / shirting close-up" style="width:100%;aspect-ratio:16/9;height:auto;display:block;background:#eef4fa;border-radius:16px;"></image-slot>
+      <image-slot id="art-cotton-hero" fit="cover" placeholder="Hero image — raw cotton boll / combed sliver / fine yarn cones" style="width:100%;aspect-ratio:16/9;height:auto;display:block;background:#eef4fa;border-radius:16px;"></image-slot>
     </div>
 
-    <!-- body -->
     <div style="max-width:760px;margin:0 auto;padding:48px 32px 0;">
+      <p style="font-size:19.5px;line-height:1.7;color:#2c3c4c;"><strong>Two 100% cotton shirts at the same price can feel a world apart.</strong> The reason sits below the weave and the count, in the cotton fibre itself — how long the staple is, and whether the yarn was combed. Understand those two things and most cotton marketing falls into place.</p>
 
-      <p style="font-size:19.5px;line-height:1.7;color:#2c3c4c;"><strong>If you only learn one fabric spec before developing a woven program, make it GSM.</strong> It tells you more about how a shirt or dress will look, feel, drape and wear than almost any other single number — and it’s the spec most often left vague on a tech pack.</p>
+      <h2>It starts with staple length</h2>
+      <p>Cotton grows as fibres of a given length, called the <strong>staple</strong>. Longer staple is the single biggest driver of quality: longer fibres twist into <strong>smoother, stronger, more lustrous yarn</strong> that pills less and can be spun to finer counts. Shorter staple gives a coarser, weaker, fuzzier yarn. Everything else — combing, count, finish — builds on this foundation.</p>
 
-      <h2>What GSM actually means</h2>
-      <p>GSM stands for <strong>grams per square metre</strong> — the weight of one square metre of a fabric. A poplin at 110 GSM is light and crisp; a twill at 280 GSM is substantial and structured. Because it’s a weight per fixed area, GSM lets you compare two fabrics fairly even when their construction, yarn and weave are different.</p>
-      <p>It’s a more reliable signal than <strong>thread count</strong>, which can be inflated by counting plied yarns twice and says little about hand or durability. Two fabrics with the same thread count can feel completely different; their GSM usually won’t lie.</p>
-
-      <h2>Typical weight ranges for woven garments</h2>
-      <p>These are working ranges we use for shirting, dresses and bottoms. They’re guides, not rules — finish, weave and fibre all shift how a given weight behaves.</p>
+      <h2>Combed versus carded</h2>
+      <p>All cotton is <strong>carded</strong> — cleaned and aligned into a loose rope of fibre. <strong>Combing</strong> is an extra step that goes further: it pulls out the shortest fibres and any remaining debris, leaving only the longer, parallel ones.</p>
 
       <div class="spec" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 28px;">
-        <div style="border:1px solid #e6eef6;border-radius:12px;padding:20px 22px;background:#f8fbfe;">
-          <div style="font-family:'Spectral',serif;font-size:19px;font-weight:600;color:#0f2742;margin-bottom:4px;">90–120 GSM</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;margin-bottom:8px;">Lightweight</div>
-          <p style="font-size:14.5px;line-height:1.55;color:#54677a;margin:0;">Summer shirting, voiles, soft dresses. Breathable and fluid, but shows construction faults easily.</p>
+        <div style="border:1px solid #e6eef6;border-radius:12px;padding:22px 24px;background:#f8fbfe;">
+          <div style="font-family:'Spectral',serif;font-size:19px;font-weight:600;color:#0f2742;margin-bottom:4px;">Carded</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;margin-bottom:10px;">Standard</div>
+          <p style="font-size:14.5px;line-height:1.6;color:#54677a;margin:0;">Cleaned and aligned, short fibres still present. Slightly fuzzier and weaker, more economical. Fine for everyday and heavier casual fabrics.</p>
         </div>
-        <div style="border:1px solid #e6eef6;border-radius:12px;padding:20px 22px;background:#f8fbfe;">
-          <div style="font-family:'Spectral',serif;font-size:19px;font-weight:600;color:#0f2742;margin-bottom:4px;">120–170 GSM</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;margin-bottom:8px;">Mid-weight</div>
-          <p style="font-size:14.5px;line-height:1.55;color:#54677a;margin:0;">The everyday sweet spot for formal and casual shirts — enough body to hold a collar, still comfortable.</p>
-        </div>
-        <div style="border:1px solid #e6eef6;border-radius:12px;padding:20px 22px;background:#f8fbfe;">
-          <div style="font-family:'Spectral',serif;font-size:19px;font-weight:600;color:#0f2742;margin-bottom:4px;">170–230 GSM</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;margin-bottom:8px;">Heavy shirting / light bottoms</div>
-          <p style="font-size:14.5px;line-height:1.55;color:#54677a;margin:0;">Overshirts, flannels, lighter trousers and shorts. Structured, opaque, holds its shape.</p>
-        </div>
-        <div style="border:1px solid #e6eef6;border-radius:12px;padding:20px 22px;background:#f8fbfe;">
-          <div style="font-family:'Spectral',serif;font-size:19px;font-weight:600;color:#0f2742;margin-bottom:4px;">230–320 GSM</div>
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;margin-bottom:8px;">Bottom-weight</div>
-          <p style="font-size:14.5px;line-height:1.55;color:#54677a;margin:0;">Chinos, cargo shorts, twill trousers and structured dresses. Durable and stable through wash and wear.</p>
+        <div style="border:1px solid #e6eef6;border-radius:12px;padding:22px 24px;background:#f8fbfe;">
+          <div style="font-family:'Spectral',serif;font-size:19px;font-weight:600;color:#0f2742;margin-bottom:4px;">Combed</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;margin-bottom:10px;">Premium</div>
+          <p style="font-size:14.5px;line-height:1.6;color:#54677a;margin:0;">Short fibres removed, only long ones left. Smoother, stronger, less pilling, takes dye more evenly — and costs more because some fibre is discarded. The choice for fine shirting.</p>
         </div>
       </div>
 
-      <h2>Why the same GSM can feel different</h2>
-      <p>Weight is the headline, but three things change how it reads on the body:</p>
-      <ul>
-        <li><strong>Weave.</strong> A 150 GSM poplin feels crisper than a 150 GSM twill of the same yarn, because the weave changes drape and surface.</li>
-        <li><strong>Fibre.</strong> Linen and viscose hang heavier and softer than cotton at the same weight; a polyester blend feels firmer.</li>
-        <li><strong>Finish.</strong> Enzyme washing, peaching and calendering all alter the hand without changing GSM much — so always judge a finished, washed swatch, not greige cloth.</li>
-      </ul>
+      <p>Combing literally throws away part of the cotton, which is why combed yarn costs more — you're paying for what was removed as much as what remains.</p>
 
-      <!-- pull quote -->
-      <blockquote style="margin:40px 0;padding:24px 0 24px 28px;border-left:3px solid #1862ab;">
-        <p style="font-family:'Spectral',serif;font-style:italic;font-size:22px;line-height:1.45;color:#0f2742;margin:0;">Specify a GSM <em>and</em> a tolerance. “160 GSM ± 5%” removes the single most common source of bulk-vs-sample disappointment.</p>
+            <blockquote style="margin:40px 0;padding:24px 0 24px 28px;border-left:3px solid #1862ab;">
+        <p style="font-family:'Spectral',serif;font-style:italic;font-size:22px;line-height:1.45;color:#0f2742;margin:0;">Long staple is the raw material; combing is the refinement. The best cotton is both — long fibres, then combed to keep only the longest.</p>
       </blockquote>
 
-      <h2>How to choose the right weight</h2>
-      <p>Work backwards from the garment’s job:</p>
+      <h2>Pima, Supima, Egyptian — what's real</h2>
+      <p>The famous cotton names are, at heart, <strong>extra-long-staple (ELS) varieties</strong>. The name tells you the fibre's pedigree, not automatically the finished quality:</p>
       <ul>
-        <li><strong>Market &amp; climate.</strong> A shirt for a Gulf summer wants 110–130 GSM; the same style for European autumn might sit at 150–170.</li>
-        <li><strong>Price point.</strong> Heavier cloth uses more yarn and usually costs more per metre — weight is a real lever on landed cost, not just feel.</li>
-        <li><strong>Construction.</strong> Lighter fabrics demand cleaner sewing; faults hide in heavier, textured cloth. Match your weight to the finishing standard you can hold.</li>
-        <li><strong>Drape vs structure.</strong> Decide whether the style should flow or hold a shape, then pick the weight that gets you there — and confirm it on a sewn sample, not a swatch.</li>
+        <li><strong>Upland.</strong> The everyday cotton behind most of the world's clothing — short to medium staple.</li>
+        <li><strong>Pima.</strong> An extra-long-staple cotton, smoother and stronger than upland.</li>
+        <li><strong>Supima.</strong> A trademark for 100% American-grown Pima, certified through the supply chain — so the name carries a verification upland and generic "Pima" claims don't.</li>
+        <li><strong>Egyptian.</strong> Refers to cotton grown in Egypt; the genuine ELS Giza varieties are superb, but the label is widely misused, so origin alone is no guarantee.</li>
+        <li><strong>Sea Island.</strong> A rare, historically prized ELS cotton — mostly a heritage and luxury claim today.</li>
+      </ul>
+
+      <h2>The honest caveat</h2>
+      <p>These names are also marketing, and the terms are loosely policed. "Egyptian cotton" on a label may be a small blend percentage, or a lesser variety grown in Egypt. A long-staple <em>name</em> doesn't help if the yarn is carded, loosely spun or thinly blended. <strong>Treat the variety as one input, not a guarantee</strong> — and judge a washed swatch, not the hangtag.</p>
+
+      <h2>What longer staple actually buys you</h2>
+      <ul>
+        <li><strong>Smoothness and softness</strong> against the skin.</li>
+        <li><strong>Strength and longevity</strong> — fewer fibre ends to break and pill.</li>
+        <li><strong>Lustre</strong> and cleaner dye uptake for richer colour.</li>
+        <li><strong>Finer counts</strong> — the ability to spin the high Ne yarns that make luxury shirting.</li>
       </ul>
 
       <h2>What to put on your tech pack</h2>
-      <p>For every woven style, we ask buyers to lock four things up front: <strong>GSM with tolerance</strong>, <strong>weave</strong> (poplin, twill, dobby, oxford…), <strong>fibre composition</strong>, and the <strong>finish</strong>. With those four fixed, sampling moves faster and bulk matches the approved sample far more reliably.</p>
+      <p>Don't just write "100% cotton." Specify <strong>combed or carded</strong>, the <strong>staple class or variety</strong> (and a certification like Supima if you're paying for it), and tie it to your yarn count and finish. For the count side of this, see our guide on <a href="yarn-count-ne-cotton-vs-lea-linen.html" style="color:#1862ab;">cotton and linen count</a>. With fibre specified properly, you stop paying premium prices for ordinary cotton.</p>
+
 
       <!-- CTA -->
       <div style="margin:52px 0 8px;background:#f5f9fd;border:1px solid #e3ebf3;border-radius:16px;padding:32px 34px;">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#1862ab;margin-bottom:10px;">Developing a woven program?</div>
-        <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:23px;color:#0f2742;margin:0 0 10px;">Send us your tech pack — we’ll advise on weight and construction.</h3>
-        <p style="font-size:15.5px;line-height:1.6;color:#54677a;margin:0 0 20px;">Our team in Salem will recommend the right fabric weight for your style, market and price point, and sample against it.</p>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#1862ab;margin-bottom:10px;">Choosing your cotton?</div>
+        <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:23px;color:#0f2742;margin:0 0 10px;">We'll source the right cotton quality for your fabric and price.</h3>
+        <p style="font-size:15.5px;line-height:1.6;color:#54677a;margin:0 0 20px;">From combed everyday cotton to long-staple Pima programs, our team in Salem can match fibre, count and finish to the hand you want. Send us your target.</p>
         <a href="../index.html#contact" style="text-decoration:none;display:inline-flex;align-items:center;gap:9px;background:#1862ab;color:#fff;font-weight:600;font-size:15px;padding:13px 26px;border-radius:999px;box-shadow:0 10px 24px -12px rgba(24,98,171,.65);">Get in touch →</a>
       </div>
-
     </div>
   </article>
 
-  <!-- back link -->
   <div style="max-width:760px;margin:0 auto;padding:40px 32px 0;">
     <a href="index.html" style="text-decoration:none;color:#1862ab;font-weight:600;font-size:15px;">← Back to all insights</a>
   </div>
