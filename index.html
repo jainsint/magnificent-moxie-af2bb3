@@ -60,13 +60,32 @@
   header[data-menu-open] .ji-burger span::before{top:0;transform:rotate(45deg);}
   header[data-menu-open] .ji-burger span::after{top:0;transform:rotate(-45deg);}
   .ji-mobnav{display:none;}
+  .ji-jumpnav{display:none;}
+  .ji-jumpnav a.is-active{background:var(--ji-ink,#0f2742);color:#fff !important;border-color:var(--ji-ink,#0f2742);}
+  .ji-totop{display:none;}
+  @media (min-width:769px){
+    [data-r="reachgrid"]{grid-template-columns:repeat(5,1fr) !important;}
+  }
   @media (max-width:768px){
-    [data-r="stack"]{grid-template-columns:1fr !important;gap:34px !important;}
-    [data-r="g2"]{grid-template-columns:1fr 1fr !important;}
-    [data-r="g1"]{grid-template-columns:1fr !important;}
-    [data-r="reachgrid"]{grid-template-columns:1fr 1fr !important;gap:14px !important;}
+    .ji-jumpnav{display:flex !important;position:sticky;top:74px;z-index:40;overflow-x:auto;gap:8px;padding:12px 16px;background:#fff;border-bottom:1px solid #eef3f8;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+    .ji-jumpnav::-webkit-scrollbar{display:none;}
+    .ji-jumpnav a{flex:0 0 auto;text-decoration:none;font-size:13px;font-weight:600;color:#42566a;background:#f5f9fd;border:1px solid #e6eef6;padding:8px 14px;border-radius:999px;white-space:nowrap;transition:background .15s,color .15s;}
+    .ji-totop{display:flex !important;position:fixed;right:16px;bottom:20px;z-index:45;width:46px;height:46px;border-radius:50%;background:var(--ji-ink,#0f2742);color:#fff;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(15,39,66,.55);border:none;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;transform:translateY(8px);}
+    .ji-totop.is-visible{opacity:1;pointer-events:auto;transform:translateY(0);}
+    [data-r~="stack"]{grid-template-columns:1fr !important;gap:20px !important;}
+    [data-r~="g2"]{grid-template-columns:1fr 1fr !important;}
+    [data-r~="g1"]{grid-template-columns:1fr 1fr !important;}
+    [data-r~="g1"]>div:nth-child(3){grid-column:1 / -1 !important;}
+    [data-r~="chipgrid"]{display:grid !important;grid-template-columns:1fr 1fr !important;}
+    [data-r~="chipgrid"] button{width:100% !important;box-sizing:border-box;font-size:12.5px !important;padding:10px 12px !important;text-align:center;white-space:normal !important;line-height:1.3;}
+    [data-chiptype="type"] button:last-child{grid-column:1 / -1 !important;}
+    [data-r~="reachgrid"]{grid-template-columns:1fr 1fr !important;gap:10px !important;}
+    [data-r~="reachgrid"]>div{padding:14px 14px !important;gap:8px !important;flex-direction:column !important;align-items:flex-start !important;}
+    [data-r~="reachgrid"]>div>div:first-child{font-size:16px !important;line-height:1.15 !important;}
+    [data-r~="reachgrid"]>div>div:first-child > div{font-size:16px !important;line-height:1.15 !important;white-space:normal !important;}
+    [data-r~="reachgrid"]>div>div:last-child{font-size:10px !important;}
     /* Catalogue becomes a stack of collapsible category dropdowns on mobile. */
-    [data-r="catgrid"]{display:block !important;}
+    [data-r~="catgrid"]{display:block !important;}
     #catalogue [data-catfilter]{display:none !important;}
     #catalogue .cat-group{display:block !important;border:1px solid #e6eef6;border-radius:14px;background:#fff;overflow:hidden;margin-bottom:14px;}
     #catalogue .cat-toggle{display:flex !important;width:100%;align-items:center;justify-content:space-between;gap:12px;background:#fff;border:none;cursor:pointer;font-family:inherit;padding:18px 20px;text-align:left;touch-action:manipulation;-webkit-tap-highlight-color:rgba(24,98,171,.12);-webkit-user-select:none;user-select:none;}
@@ -74,12 +93,17 @@
     #catalogue .cat-name{font-family:var(--ji-head,'Spectral'),serif;font-size:22px;font-weight:600;color:var(--ji-ink,#0f2742);line-height:1;}
     #catalogue .cat-meta{display:flex;align-items:center;gap:12px;}
     #catalogue .cat-count{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.5px;color:#8190a0;text-transform:uppercase;}
-    #catalogue .cat-chev{font-size:15px;color:var(--ji-accent,#1862ab);transition:transform .25s;line-height:1;}
+    #catalogue .cat-chev{font-size:30px;color:var(--ji-accent,#1862ab);transition:transform .25s;line-height:1;}
     #catalogue .cat-group[data-open] .cat-chev{transform:rotate(180deg);}
     #catalogue .cat-items{display:none !important;padding:2px 14px 16px;grid-template-columns:1fr !important;gap:16px;}
     #catalogue .cat-group[data-open] .cat-items{display:grid !important;}
-    [data-r="fluid"]{width:auto !important;height:auto !important;}
-    [data-r="pad"]{padding-top:60px !important;padding-bottom:60px !important;}
+    [data-r~="fluid"]{width:auto !important;height:auto !important;}
+    [data-r~="pad"]{padding:38px 20px !important;}
+    [data-r~="sechead"]{margin-bottom:26px !important;}
+    [data-r~="herotop"]{padding:22px 20px 34px !important;gap:44px !important;}
+    [data-r~="foot"]{padding:32px 20px !important;}
+    [data-r~="cardpad"]{padding:26px 20px !important;}
+    [data-r~="metacell"]{padding:16px 14px !important;}
     [data-r="nav"]{gap:12px !important;}
     [data-r="nav"] a:not(:last-child){display:none !important;}
     .ji-burger{display:flex !important;order:2;}
@@ -261,9 +285,21 @@
     </div>
   </header>
 
+  <!-- Mobile-only quick-jump nav: lets users skip straight to a section instead of scrolling past everything. -->
+  <nav class="ji-jumpnav" aria-label="Jump to section">
+    <a href="#about" data-jump="about">About</a>
+    <a href="#reach" data-jump="reach">Reach</a>
+    <a href="#capabilities" data-jump="capabilities">Capabilities</a>
+    <a href="#catalogue" data-jump="catalogue">Catalogue</a>
+    <a href="#factory" data-jump="factory">Floor</a>
+    <a href="#insights" data-jump="insights">Insights</a>
+    <a href="#builder" data-jump="builder">Builder</a>
+    <a href="#contact" data-jump="contact">Contact</a>
+  </nav>
+
   <!-- ===== HERO ===== -->
   <section id="top" style="position:relative;background:linear-gradient(180deg,#f6fafe 0%,#ffffff 100%);">
-    <div data-r="stack" style="max-width:1200px;margin:0 auto;padding:45px 32px 96px;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;">
+    <div data-r="stack herotop" style="max-width:1200px;margin:0 auto;padding:45px 32px 96px;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;">
       <div>
         <div data-reveal="" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);display:inline-flex;align-items:center;gap:10px;border:1px solid #cfe0f0;background:#fff;padding:7px 15px;border-radius:999px;margin-bottom:26px;">
           <span style="width:7px;height:7px;border-radius:50%;background:var(--ji-accent,#1862ab);"></span>
@@ -284,19 +320,19 @@
     <!-- meta strip -->
     <div style="border-top:1px solid #e7eef5;background:#fff;">
       <div data-r="g2" style="max-width:1200px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(4,1fr);">
-        <div data-reveal="" style="opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);padding:26px 28px;border-right:1px solid #eef3f8;">
+        <div data-r="metacell" data-reveal="" style="opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);padding:26px 28px;border-right:1px solid #eef3f8;">
           <div style="font-family:var(--ji-head,'Spectral'),serif;font-size:30px;color:var(--ji-ink,#0f2742);font-weight:600;">30,000+</div><div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.5px;color:#7e8fa0;text-transform:uppercase;margin-top:6px;">Garments / month</div>
           
         </div>
-        <div data-reveal="" style="opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.16,1,.3,1) .07s,transform .8s cubic-bezier(.16,1,.3,1) .07s;padding:26px 28px;border-right:1px solid #eef3f8;">
+        <div data-r="metacell" data-reveal="" style="opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.16,1,.3,1) .07s,transform .8s cubic-bezier(.16,1,.3,1) .07s;padding:26px 28px;border-right:1px solid #eef3f8;">
           <div style="font-family:var(--ji-head,'Spectral'),serif;font-size:30px;color:var(--ji-ink,#0f2742);font-weight:600;">5<span style="color: var(--ji-ink,#0f2742); font-family: var(--ji-head,'Spectral'),serif;">00 pcs</span></div>
           <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.5px;color:#7e8fa0;text-transform:uppercase;margin-top:6px;">Minimum order</div>
         </div>
-        <div data-reveal="" style="opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.16,1,.3,1) .14s,transform .8s cubic-bezier(.16,1,.3,1) .14s;padding:26px 28px;border-right:1px solid #eef3f8;">
+        <div data-r="metacell" data-reveal="" style="opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.16,1,.3,1) .14s,transform .8s cubic-bezier(.16,1,.3,1) .14s;padding:26px 28px;border-right:1px solid #eef3f8;">
           <div style="font-family:var(--ji-head,'Spectral'),serif;font-size:30px;color:var(--ji-ink,#0f2742);font-weight:600;">60–90 days</div>
           <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.5px;color:#7e8fa0;text-transform:uppercase;margin-top:6px;">Lead time</div>
         </div>
-        <div data-reveal="" style="opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.16,1,.3,1) .21s,transform .8s cubic-bezier(.16,1,.3,1) .21s;padding:26px 28px;">
+        <div data-r="metacell" data-reveal="" style="opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.16,1,.3,1) .21s,transform .8s cubic-bezier(.16,1,.3,1) .21s;padding:26px 28px;">
           <div style="font-family: var(--ji-head,'Spectral'),serif; font-size: 30px; color: var(--ji-ink,#0f2742); font-weight: 600; width: 177px; height: 84px">4+ categories</div>
           <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.5px;color:#7e8fa0;text-transform:uppercase;margin-top:6px;">SHIRTS · DRESSES · PANTS · SHORTS &amp; MORE</div>
         </div>
@@ -345,28 +381,23 @@
       </div>
             <div data-reveal="" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1) .1s,transform .9s cubic-bezier(.16,1,.3,1) .1s;display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:20px;" data-r="reachgrid">
         <div style="background:var(--ji-soft,#eaf2fb);border:1px solid #e6eef6;border-radius:14px;padding:26px 24px;display:flex;flex-direction:column;gap:14px;">
-          <span style="width:9px;height:9px;background:var(--ji-accent,#1862ab);transform:rotate(45deg);"></span>
-          <div style="font-family:var(--ji-head,'Spectral'),serif;font-size:23px;font-weight:600;color:var(--ji-ink,#0f2742);line-height:1.1;">United Kingdom</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;"><span style="width:9px;height:9px;background:var(--ji-accent,#1862ab);transform:rotate(45deg);flex:none;margin-top:7px;"></span><div style="font-family:var(--ji-head,'Spectral'),serif;font-size:19px;font-weight:600;color:var(--ji-ink,#0f2742);line-height:1.1;white-space:nowrap;">United Kingdom</div></div>
           <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:var(--ji-accent,#1862ab);text-transform:uppercase;">Europe</div>
         </div>
         <div style="background:var(--ji-soft,#eaf2fb);border:1px solid #e6eef6;border-radius:14px;padding:26px 24px;display:flex;flex-direction:column;gap:14px;">
-          <span style="width:9px;height:9px;background:var(--ji-accent,#1862ab);transform:rotate(45deg);"></span>
-          <div style="font-family:var(--ji-head,'Spectral'),serif;font-size:23px;font-weight:600;color:var(--ji-ink,#0f2742);line-height:1.1;">Malaysia</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;"><span style="width:9px;height:9px;background:var(--ji-accent,#1862ab);transform:rotate(45deg);flex:none;margin-top:7px;"></span><div style="font-family:var(--ji-head,'Spectral'),serif;font-size:19px;font-weight:600;color:var(--ji-ink,#0f2742);line-height:1.1;white-space:nowrap;">Malaysia</div></div>
           <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:var(--ji-accent,#1862ab);text-transform:uppercase;">Asia</div>
         </div>
         <div style="background:var(--ji-soft,#eaf2fb);border:1px solid #e6eef6;border-radius:14px;padding:26px 24px;display:flex;flex-direction:column;gap:14px;">
-          <span style="width:9px;height:9px;background:var(--ji-accent,#1862ab);transform:rotate(45deg);"></span>
-          <div style="font-family:var(--ji-head,'Spectral'),serif;font-size:23px;font-weight:600;color:var(--ji-ink,#0f2742);line-height:1.1;">Singapore</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;"><span style="width:9px;height:9px;background:var(--ji-accent,#1862ab);transform:rotate(45deg);flex:none;margin-top:7px;"></span><div style="font-family:var(--ji-head,'Spectral'),serif;font-size:19px;font-weight:600;color:var(--ji-ink,#0f2742);line-height:1.1;white-space:nowrap;">Singapore</div></div>
           <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:var(--ji-accent,#1862ab);text-transform:uppercase;">Asia</div>
         </div>
         <div style="background:var(--ji-soft,#eaf2fb);border:1px solid #e6eef6;border-radius:14px;padding:26px 24px;display:flex;flex-direction:column;gap:14px;">
-          <span style="width:9px;height:9px;background:var(--ji-accent,#1862ab);transform:rotate(45deg);"></span>
-          <div style="font-family:var(--ji-head,'Spectral'),serif;font-size:23px;font-weight:600;color:var(--ji-ink,#0f2742);line-height:1.1;">Australia</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;"><span style="width:9px;height:9px;background:var(--ji-accent,#1862ab);transform:rotate(45deg);flex:none;margin-top:7px;"></span><div style="font-family:var(--ji-head,'Spectral'),serif;font-size:19px;font-weight:600;color:var(--ji-ink,#0f2742);line-height:1.1;white-space:nowrap;">Australia</div></div>
           <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:var(--ji-accent,#1862ab);text-transform:uppercase;">Australia</div>
         </div>
         <div style="background:var(--ji-soft,#eaf2fb);border:1px solid #e6eef6;border-radius:14px;padding:26px 24px;display:flex;flex-direction:column;gap:14px;">
-          <span style="width:9px;height:9px;background:var(--ji-accent,#1862ab);transform:rotate(45deg);"></span>
-          <div style="font-family:var(--ji-head,'Spectral'),serif;font-size:23px;font-weight:600;color:var(--ji-ink,#0f2742);line-height:1.1;">United States</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;"><span style="width:9px;height:9px;background:var(--ji-accent,#1862ab);transform:rotate(45deg);flex:none;margin-top:7px;"></span><div style="font-family:var(--ji-head,'Spectral'),serif;font-size:19px;font-weight:600;color:var(--ji-ink,#0f2742);line-height:1.1;white-space:nowrap;">United States</div></div>
           <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:var(--ji-accent,#1862ab);text-transform:uppercase;">NORTH AMERICA</div>
         </div>
       </div>
@@ -376,7 +407,7 @@
   <!-- ===== CAPABILITIES (dark band) ===== -->
   <section id="capabilities" style="background:var(--ji-ink,#0f2742);color:#eaf1f8;">
     <div style="max-width:1200px;margin:0 auto;padding:104px 32px;" data-r="pad">
-      <div data-reveal="" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);margin-bottom:54px;max-width:680px;">
+      <div data-r="sechead" data-reveal="" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);margin-bottom:54px;max-width:680px;">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2px;color:#6fa8de;text-transform:uppercase;margin-bottom:18px;">03 — Capabilities</div>
         <h2 style="font-family:var(--ji-head,'Spectral'),serif;font-weight:500;font-size:clamp(28px,3vw,40px);line-height:1.12;letter-spacing:-.4px;color:#fff;margin:0;">Everything from sampling to packed export cartons.</h2>
       </div>
@@ -407,7 +438,7 @@
   <!-- ===== CATALOGUE ===== -->
   <section id="catalogue" style="background:#f5f9fd;">
     <div style="max-width:1200px;margin:0 auto;padding:104px 32px;" data-r="pad">
-      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:46px;">
+      <div data-r="sechead" style="display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:46px;">
         <div data-reveal="" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);max-width:620px;">
           <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2px;color:var(--ji-accent,#1862ab);text-transform:uppercase;margin-bottom:18px;">04 — Product catalogue</div>
           <h2 style="font-family:var(--ji-head,'Spectral'),serif;font-weight:500;font-size:clamp(28px,3vw,40px);line-height:1.1;letter-spacing:-.4px;color:var(--ji-ink,#0f2742);margin:0 0 14px;">Wovenwear across men, women &amp; kids.</h2>
@@ -568,7 +599,7 @@
 
   <!-- ===== INSIDE THE FLOOR ===== -->
   <section id="factory" style="max-width:1200px;margin:0 auto;padding:104px 32px;" data-r="pad">
-    <div data-reveal="" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);max-width:660px;margin-bottom:48px;">
+    <div data-r="sechead" data-reveal="" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);max-width:660px;margin-bottom:48px;">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2px;color:var(--ji-accent,#1862ab);text-transform:uppercase;margin-bottom:18px;">05 — Inside the floor</div>
       <h2 style="font-family:var(--ji-head,'Spectral'),serif;font-weight:500;font-size:clamp(28px,3vw,40px);line-height:1.1;letter-spacing:-.4px;color:var(--ji-ink,#0f2742);margin:0 0 14px;">A focused floor of skilled hands.</h2>
       <p style="font-size:17px;line-height:1.7;color:#54677a;margin:0;">A tightly run unit where cutting, stitching and finishing happen side by side, and every order is watched from first cut to packed carton.</p>
@@ -635,17 +666,17 @@
   <!-- ===== REQUIREMENT BUILDER ===== -->
   <section id="builder" style="background:#fff;border-top:1px solid #eef3f8;">
     <div style="max-width:1200px;margin:0 auto;padding:104px 32px;" data-r="pad">
-      <div data-reveal="" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);max-width:660px;margin:0 auto 46px;text-align:center;">
+      <div data-r="sechead" data-reveal="" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);max-width:660px;margin:0 auto 46px;text-align:center;">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2px;color:var(--ji-accent,#1862ab);text-transform:uppercase;margin-bottom:18px;">Start a project</div>
         <h2 style="font-family:var(--ji-head,'Spectral'),serif;font-weight:500;font-size:clamp(28px,3vw,40px);line-height:1.1;letter-spacing:-.4px;color:var(--ji-ink,#0f2742);margin:0 0 14px;">Build your requirement in a minute.</h2>
         <p style="font-size:16.5px;line-height:1.65;color:#54677a;margin:0;">Tell us what you're producing and how to reach you — our team comes back with sampling, MOQ and a production plan.</p>
       </div>
 
-      <div data-reveal="" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1) .1s,transform .9s cubic-bezier(.16,1,.3,1) .1s;max-width:860px;margin:0 auto;background:#fff;border:1px solid #e3ebf3;border-radius:20px;padding:40px 42px;box-shadow:0 24px 60px -34px rgba(15,39,66,.35);">
+      <div data-r="cardpad" data-reveal="" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1) .1s,transform .9s cubic-bezier(.16,1,.3,1) .1s;max-width:860px;margin:0 auto;background:#fff;border:1px solid #e3ebf3;border-radius:20px;padding:40px 42px;box-shadow:0 24px 60px -34px rgba(15,39,66,.35);">
 
         <!-- Category -->
         <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:#8190a0;text-transform:uppercase;margin-bottom:12px;">Garment category</div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;">
+        <div data-r="chipgrid" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;">
           <button type="button" data-group="cat" data-value="Menswear" onClick="{{ onChip }}" style="border:1px solid var(--ji-ink,#0f2742);background:var(--ji-ink,#0f2742);color:#fff;cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Menswear</button>
           <button type="button" data-group="cat" data-value="Womenswear" onClick="{{ onChip }}" style="border:1px solid #d3e0ee;background:#fff;color:var(--ji-ink,#0f2742);cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Womenswear</button>
           <button type="button" data-group="cat" data-value="Kids" onClick="{{ onChip }}" style="border:1px solid #d3e0ee;background:#fff;color:var(--ji-ink,#0f2742);cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Kids</button>
@@ -654,7 +685,7 @@
 
         <!-- Garment type -->
         <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:#8190a0;text-transform:uppercase;margin-bottom:12px;">Product type</div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;">
+        <div data-r="chipgrid" data-chiptype="type" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;">
           <button type="button" data-group="type" data-value="Shirts" onClick="{{ onChip }}" style="border:1px solid var(--ji-ink,#0f2742);background:var(--ji-ink,#0f2742);color:#fff;cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Shirts</button>
           <button type="button" data-group="type" data-value="Pants" onClick="{{ onChip }}" style="border:1px solid #d3e0ee;background:#fff;color:var(--ji-ink,#0f2742);cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Pants</button>
           <button type="button" data-group="type" data-value="Dresses" onClick="{{ onChip }}" style="border:1px solid #d3e0ee;background:#fff;color:var(--ji-ink,#0f2742);cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Dresses</button>
@@ -664,7 +695,7 @@
 
         <!-- Order volume -->
         <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;color:#8190a0;text-transform:uppercase;margin-bottom:12px;">Order volume</div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px;">
+        <div data-r="chipgrid" style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px;">
           <button type="button" data-group="volume" data-value="Sample / development" onClick="{{ onChip }}" style="border:1px solid #d3e0ee;background:#fff;color:var(--ji-ink,#0f2742);cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">Sample / development</button>
           <button type="button" data-group="volume" data-value="500 – 2,000 pcs" onClick="{{ onChip }}" style="border:1px solid var(--ji-ink,#0f2742);background:var(--ji-ink,#0f2742);color:#fff;cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">500 – 2,000 pcs</button>
           <button type="button" data-group="volume" data-value="2,000 – 5,000 pcs" onClick="{{ onChip }}" style="border:1px solid #d3e0ee;background:#fff;color:var(--ji-ink,#0f2742);cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;transition:all .2s;">2,000 – 5,000 pcs</button>
@@ -722,7 +753,7 @@
 
   <!-- ===== CONTACT ===== -->
   <section id="contact" style="background:#f5f9fd;border-top:1px solid #e7eef5;">
-    <div data-r="stack" style="max-width:1200px;margin:0 auto;padding:104px 32px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+    <div data-r="stack pad" style="max-width:1200px;margin:0 auto;padding:104px 32px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
       <div data-reveal="" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2px;color:var(--ji-accent,#1862ab);text-transform:uppercase;margin-bottom:18px;">07 — Get in touch</div>
         <h2 style="font-family:var(--ji-head,'Spectral'),serif;font-weight:500;font-size:clamp(28px,3.2vw,42px);line-height:1.08;letter-spacing:-.5px;color:var(--ji-ink,#0f2742);margin:0 0 20px;">Let's talk about your next production run.</h2>
@@ -757,7 +788,7 @@
 
   <!-- ===== FOOTER ===== -->
   <footer style="background:var(--ji-ink,#0f2742);color:#aebfd0;">
-    <div style="max-width:1200px;margin:0 auto;padding:54px 32px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;">
+    <div data-r="foot" style="max-width:1200px;margin:0 auto;padding:54px 32px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;">
       <div style="display:flex;align-items:center;gap:12px;">
         <span style="width:14px;height:14px;background:var(--ji-accent-2,#4f93d6);transform:rotate(45deg);display:inline-block;border-radius:2px;"></span>
         <div>
@@ -778,6 +809,11 @@
       <div style="max-width:1200px;margin:0 auto;padding:20px 32px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#6d86a1;letter-spacing:.3px;">© 2026 Jains Internationnal. Men · Women · Kids wovenwear for export markets.</div>
     </div>
   </footer>
+
+  <!-- Mobile-only floating back-to-top, shown once the visitor has scrolled past the hero. -->
+  <button type="button" class="ji-totop" aria-label="Back to top" onClick="{{ scrollToTop }}">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
 
 </div>
 </x-dc>
@@ -812,7 +848,47 @@ class Component extends DCLogic {
     window.__jiMotion = mot;
   }
 
-  componentDidMount() { this.applyTheme(); this.syncBuilderEmail(); }
+  componentDidMount() {
+    this.applyTheme(); this.syncBuilderEmail();
+    this.setupMobileNav();
+  }
+
+  // Mobile quick-jump pills: highlight whichever section is in view, keep the
+  // active pill scrolled into sight, and toggle the floating back-to-top button.
+  setupMobileNav() {
+    var scope = this.root || document;
+    var jumpLinks = Array.prototype.slice.call(scope.querySelectorAll('.ji-jumpnav a'));
+    var totop = scope.querySelector('.ji-totop');
+    var sections = ['about','reach','capabilities','catalogue','factory','insights','builder','contact']
+      .map(function(id){ return scope.querySelector('#'+id); })
+      .filter(Boolean);
+    if (jumpLinks.length && sections.length) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          var link = jumpLinks.filter(function(a){ return a.getAttribute('data-jump') === e.target.id; })[0];
+          if (!link) return;
+          if (e.isIntersecting) {
+            jumpLinks.forEach(function(a){ a.classList.remove('is-active'); });
+            link.classList.add('is-active');
+            if (typeof link.scrollIntoView === 'function') {
+              var nav = link.parentElement;
+              if (nav) nav.scrollLeft = link.offsetLeft - 24;
+            }
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+      sections.forEach(function(s){ io.observe(s); });
+    }
+    if (totop) {
+      var heroEl = scope.querySelector('#top');
+      var onScroll = function(){
+        var past = heroEl ? (window.scrollY > heroEl.offsetHeight * 0.6) : (window.scrollY > 400);
+        totop.classList.toggle('is-visible', past);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+  }
   componentDidUpdate() { this.applyTheme(); }
 
   $all(sel) {
@@ -916,6 +992,12 @@ class Component extends DCLogic {
       },
       onSend: () => this.onSend(),
       onEmailLink: () => this.syncBuilderEmail(),
+      scrollToTop: () => {
+        var scope = this.root || document;
+        var top = scope.querySelector ? scope.querySelector('#top') : null;
+        if (top && top.scrollIntoView) top.scrollIntoView({ behavior: 'smooth' });
+        else window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
     };
   }
 }
