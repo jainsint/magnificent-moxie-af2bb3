@@ -1,211 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>How to Read and Write a Tech Pack — Insights · Jains Internationnal</title>
+<meta name="description" content="What goes into a garment tech pack, section by section, and the gaps that cause sampling failures. A practical buyer's guide.">
+<link rel="canonical" href="https://www.jainsint.com/insights/how-to-read-a-tech-pack">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Jains Internationnal">
+<meta property="og:title" content="How to read (and write) a tech pack that actually works">
+<meta property="og:description" content="What goes into a garment tech pack, section by section, and the gaps that cause sampling failures. A practical buyer's guide.">
+<meta property="og:url" content="https://www.jainsint.com/insights/how-to-read-a-tech-pack">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to read (and write) a tech pack that actually works",
+  "description": "What goes into a garment tech pack, section by section, and the gaps that cause sampling failures. A practical buyer's guide.",
+  "author": {
+    "@type": "Organization",
+    "name": "Jains Internationnal"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jains Internationnal",
+    "url": "https://www.jainsint.com/"
+  },
+  "datePublished": "2026-08-08",
+  "articleSection": "Sourcing",
+  "mainEntityOfPage": "https://www.jainsint.com/insights/how-to-read-a-tech-pack",
+  "image": "https://www.jainsint.com/assets/tech-pack.png"
+}
+</script>
+<link rel="stylesheet" href="/_ds/modernist-f887a11e-099c-44b0-b7fc-838925b9f4aa/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script src="/_ds/modernist-f887a11e-099c-44b0-b7fc-838925b9f4aa/_ds_bundle.js"></script>
+<script src="/image-slot.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CP618BZRFF"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-CP618BZRFF');
+  gtag('config', 'AW-18255331971');
 </script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How to Read and Write a Tech Pack — Insights · Jains Internationnal</title>
-<meta name="description" content="What goes into a garment tech pack, section by section, and the gaps that cause sampling failures. A practical buyer's guide.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{margin:0;background:#fff;font-family:'Hanken Grotesk',system-ui,sans-serif;color:#21303f;-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.7;}
-  a{color:inherit;}
-  .art h2{font-family:'Spectral',serif;font-weight:600;font-size:clamp(24px,2.6vw,30px);line-height:1.18;letter-spacing:-.3px;color:#0f2742;margin:52px 0 16px;}
-  .art h3{font-family:'Spectral',serif;font-weight:600;font-size:20px;color:#0f2742;margin:34px 0 10px;}
-  .art p{font-size:17.5px;line-height:1.75;color:#3d4f60;margin:0 0 20px;}
-  .art ul{margin:0 0 22px;padding-left:0;list-style:none;}
-  .art li{position:relative;padding-left:26px;font-size:17px;line-height:1.65;color:#3d4f60;margin-bottom:12px;}
-  .art li::before{content:"";position:absolute;left:2px;top:10px;width:8px;height:8px;background:#1862ab;transform:rotate(45deg);}
-  .art strong{color:#21303f;font-weight:600;}
-  .ctab{width:100%;border-collapse:collapse;margin:8px 0 28px;font-size:15px;}
-  .ctab th,.ctab td{text-align:left;padding:13px 16px;border-bottom:1px solid #e6eef6;vertical-align:top;}
-  .ctab th{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#1862ab;font-weight:500;}
-  .ctab td{color:#3d4f60;}
-  .ctab td:first-child{font-family:'Spectral',serif;color:#0f2742;font-weight:600;font-size:16px;}
-  .ctab tr:last-child td{border-bottom:none;}
-  @media (max-width:768px){
-    .ji-nav a:not(.ji-cta){display:none;}
-    .ji-burger{display:flex !important;}
-    header[data-menu-open] .ji-mobnav{display:flex !important;}
-    .ji-foot{flex-direction:column;align-items:flex-start !important;gap:24px !important;}
-    .spec{grid-template-columns:1fr !important;}
-    .ctab{font-size:13.5px;}
-    .ctab th,.ctab td{padding:10px 11px;}
+  /* Navy-and-white theme, applied by re-pointing the design system's tokens. */
+  :root {
+    --color-bg: #ffffff;
+    --color-surface: #f4f8fc;
+    --color-text: #0f2742;
+    --color-accent: #1862ab;
+    --color-accent-100: #eef5fc;
+    --color-accent-200: #d8e7f6;
+    --color-accent-300: #b6d1ee;
+    --color-accent-400: #6ba3d8;
+    --color-accent-500: #1862ab;
+    --color-accent-600: #14528f;
+    --color-accent-700: #114574;
+    --color-accent-800: #0f3459;
+    --color-accent-900: #0f2742;
+    --color-divider: #bfd2e4;
+    --ji-navy: #0f2742;
   }
-  .ji-burger{display:none;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid #d8e3ef;border-radius:10px;background:#fff;cursor:pointer;padding:0;order:2;-webkit-tap-highlight-color:rgba(24,98,171,.12);}
-  .ji-burger span{position:relative;display:block;width:18px;height:2px;background:#0f2742;border-radius:2px;transition:transform .2s,top .2s,background .2s;}
-  .ji-burger span::before,.ji-burger span::after{content:"";position:absolute;left:0;display:block;width:18px;height:2px;background:#0f2742;border-radius:2px;transition:transform .2s,top .2s,background .2s;}
-  .ji-burger span::before{top:-6px;}
-  .ji-burger span::after{top:6px;}
-  header[data-menu-open] .ji-burger span{background:transparent;}
-  header[data-menu-open] .ji-burger span::before{top:0;transform:rotate(45deg);}
-  header[data-menu-open] .ji-burger span::after{top:0;transform:rotate(-45deg);}
-  .ji-mobnav{display:none;}
-</style>
-</head>
-<body>
+  body { margin: 0; text-wrap: pretty; background: var(--color-bg); }
+  h1, h2, h3 { font-family: 'Lora', Georgia, serif !important; font-weight: 500 !important; letter-spacing: -0.005em !important; }
+  .btn { border-radius: 999px; }
+  .tag { border-radius: 999px; }
+  image-slot { display: block; border-radius: 14px; overflow: hidden; }
+  .nav { border-bottom: none !important; }
+  a { color: var(--color-accent-700); }
+  a:hover { color: var(--color-accent); }
+  .ji-jumpnav { display: none; }
+  @media (max-width: 1150px) {
+    .nav a:not(.btn) { display: none; }
+    .ji-jumpnav {
+      display: flex; position: static;
+      gap: 8px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none;
+      padding: 10px clamp(20px, 5vw, 56px);
+      background: var(--color-bg); border-bottom: 2px solid var(--color-divider);
+    }
+    .ji-jumpnav a {
+      flex: 0 0 auto; white-space: nowrap; text-decoration: none;
+      font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--color-text); border: 1px solid var(--color-divider);
+      padding: 9px 13px; line-height: 1;
+    }
+    .ji-jumpnav a { border-radius: 999px; }
+    .ji-jumpnav a:hover { background: var(--color-accent-100); }
+    .nav .btn { display: none; }
+  }
+  /* ji-tap */
+  .ji-jumpnav a { padding: 15px 16px !important; min-height: 44px; box-sizing: border-box; }
+  .btn { min-height: 44px; }
+  .ji-jumpnav a[aria-current] { background: var(--color-accent-100); border-color: var(--color-accent-400); }
+  @media (max-width: 760px) {
+    .input, select.input, textarea.input { min-height: 44px; font-size: 16px; }
+    a[href^="tel:"], a[href^="mailto:"] { min-height: 44px; display: flex; align-items: center; }
+    a[href="/insights/"].ji-back { display: inline-flex; min-height: 44px; align-items: center; }
+  }
+    /* ji-noscrollbar */
+    .ji-jumpnav::-webkit-scrollbar { display: none; }
+    html { scrollbar-width: thin; scrollbar-color: transparent transparent; }
+    html:hover { scrollbar-color: var(--color-neutral-400) transparent; }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-button { display: none; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: transparent; }
+    :hover::-webkit-scrollbar-thumb { background: var(--color-neutral-400); }
+  </style>
+</helmet>
+<div style="font-family: var(--font-body); color: var(--color-text);">
 
-  <!-- HEADER -->
-  <header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.82);backdrop-filter:saturate(140%) blur(14px);border-bottom:1px solid #e7eef5;">
-    <div style="max-width:1100px;margin:0 auto;padding:0 32px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
-      <a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;">
-        <span style="width:16px;height:16px;background:#1862ab;transform:rotate(45deg);display:inline-block;border-radius:2px;"></span>
-        <span style="display:flex;flex-direction:column;line-height:1;">
-          <span style="font-family:'Spectral',serif;font-size:21px;font-weight:600;letter-spacing:.2px;color:#0f2742;">Jains Internationnal</span>
-          <span style="font-size:10px;letter-spacing:3.5px;text-transform:uppercase;color:#7e8fa0;margin-top:5px;font-weight:600;">Wovenwear Manufacturing</span>
-        </span>
-      </a>
-      <nav class="ji-nav" style="display:flex;align-items:center;gap:26px;">
-        <a href="../index.html#about" style="text-decoration:none;color:#42566a;font-size:14.5px;font-weight:500;letter-spacing:.2px;">About</a>
-        <a href="../index.html#capabilities" style="text-decoration:none;color:#42566a;font-size:14.5px;font-weight:500;letter-spacing:.2px;">Capabilities</a>
-        <a href="../index.html#catalogue" style="text-decoration:none;color:#42566a;font-size:14.5px;font-weight:500;letter-spacing:.2px;">Catalogue</a>
-        <a href="../index.html#factory" style="text-decoration:none;color:#42566a;font-size:14.5px;font-weight:500;letter-spacing:.2px;white-space:nowrap;">Inside the Floor</a>
-        <a href="index.html" style="text-decoration:none;color:#1862ab;font-size:14.5px;font-weight:600;letter-spacing:.2px;">Insights</a>
-        <a class="ji-cta" href="../index.html#contact" style="text-decoration:none;background:#0f2742;color:#fff;font-size:14px;font-weight:600;padding:10px 20px;border-radius:999px;letter-spacing:.2px;white-space:nowrap;">Get in touch</a>
-        <button type="button" class="ji-burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
-      </nav>
-    </div>
-    <div class="ji-mobnav" style="position:absolute;top:74px;left:0;right:0;flex-direction:column;background:#fff;border-bottom:1px solid #e7eef5;box-shadow:0 16px 30px -20px rgba(15,39,66,.5);z-index:49;">
-      <a href="../index.html#about" style="padding:15px 32px;text-decoration:none;color:#21303f;font-size:16px;font-weight:500;border-top:1px solid #f1f5fa;">About</a>
-      <a href="../index.html#capabilities" style="padding:15px 32px;text-decoration:none;color:#21303f;font-size:16px;font-weight:500;border-top:1px solid #f1f5fa;">Capabilities</a>
-      <a href="../index.html#catalogue" style="padding:15px 32px;text-decoration:none;color:#21303f;font-size:16px;font-weight:500;border-top:1px solid #f1f5fa;">Catalogue</a>
-      <a href="../index.html#factory" style="padding:15px 32px;text-decoration:none;color:#21303f;font-size:16px;font-weight:500;border-top:1px solid #f1f5fa;">Inside the Floor</a>
-      <a href="index.html" style="padding:15px 32px;text-decoration:none;color:#1862ab;font-size:16px;font-weight:600;border-top:1px solid #f1f5fa;">Insights</a>
-      <a href="../index.html#contact" style="padding:15px 32px;text-decoration:none;color:#21303f;font-size:16px;font-weight:500;border-top:1px solid #f1f5fa;">Get in touch</a>
-    </div>
-  </header>
+  <nav class="nav" style="padding-inline: clamp(20px, 5vw, 56px);">
+    <span class="nav-brand" style="letter-spacing:-0.01em; margin-right:auto;">Jains Internationnal</span>
+    <a href="/">Home</a>
+    <a href="/who-we-are">Who we are</a>
+    <a href="/what-we-make">What we make</a>
+    <a href="/who-we-serve">Who we serve</a>
+    <a href="/from-the-floor">The floor</a>
+    <a href="/insights/" aria-current="location">Insights</a>
+    <a class="btn btn-primary" href="/#help" style="text-decoration:none;">Discuss a sampling run</a>
+  </nav>
+  <nav class="ji-jumpnav" aria-label="Site sections">
+    <a href="/">Home</a>
+    <a href="/who-we-are">Who we are</a>
+    <a href="/what-we-make">What we make</a>
+    <a href="/who-we-serve">Who we serve</a>
+    <a href="/from-the-floor">The floor</a>
+    <a href="/insights/" aria-current="location">Insights</a>
+    <a href="/#help">Enquire</a>
+  </nav>
 
-  <!-- ARTICLE -->
-  <article class="art">
-    <div style="max-width:760px;margin:0 auto;padding:64px 32px 0;">
-      <a href="index.html" style="text-decoration:none;color:#1862ab;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.5px;display:inline-flex;align-items:center;gap:7px;margin-bottom:26px;">← All insights</a>
-      <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:#1862ab;margin-bottom:16px;">Sourcing · Guide</div>
-      <h1 style="font-family:'Spectral',serif;font-weight:500;font-size:clamp(32px,4.4vw,50px);line-height:1.08;letter-spacing:-.5px;color:#0f2742;margin:0 0 22px;">How to read (and write) a tech pack that actually works</h1>
-      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#8190a0;letter-spacing:.3px;border-bottom:1px solid #eef3f8;padding-bottom:28px;">
-        <span>By Jains Internationnal</span><span style="color:#cdd9e4;">·</span><span>8 August 2026</span><span style="color:#cdd9e4;">·</span><span>9 min read</span>
+  <article style="max-width:1200px; margin:0 auto; padding:0 clamp(20px,5vw,56px);">
+
+    <header style="padding:70px 0 28px; max-width:72ch;">
+      <a href="/insights/" class="ji-back" style="display:inline-block; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; margin-bottom:28px;">← All insights</a>
+      <div style="font-size:13px; line-height:14px; letter-spacing:0.08em; text-transform:uppercase; color:var(--color-accent-700); margin-bottom:20px;">Sourcing · Guide</div>
+      <h1 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:clamp(34px,4.4vw,60px); line-height:1.06; letter-spacing:-0.02em; margin:0 0 0 -0.058em;">How to read (and write) a tech pack that actually works</h1>
+      <div style="display:flex; gap:20px; flex-wrap:wrap; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent); margin-top:28px;">
+        <span>By Jains Internationnal</span>
+        <span>8 August 2026</span>
+        <span>9 min read</span>
+      </div>
+    </header>
+
+    <div style="margin:28px 0 0; aspect-ratio:16/9;">
+      <image-slot id="art-techpack-hero" shape="rect" fit="cover" src="/assets/tech-pack.png" placeholder="Hero image — tech pack spec sheet / flat sketch on a desk" alt="How to read (and write) a tech pack that actually works - Jains Internationnal" style="width:100%; height:100%;"></image-slot>
+    </div>
+
+    <div style="max-width:72ch; padding:56px 0 0;">
+<a href="/insights/" style="text-decoration:none; color:var(--color-accent-700); font-size:12.5px; letter-spacing:.5px; display:inline-flex; align-items:center; gap:7px; margin-bottom:26px;">← All insights</a>
+      <div style="font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:var(--color-accent-700); margin-bottom:16px;">Sourcing · Guide</div>
+      <h1 style="font-family:var(--font-heading); font-weight:500; font-size:clamp(32px,4.4vw,50px); line-height:1.08; letter-spacing:-.5px; color:var(--color-text); margin:0 0 22px;">How to read (and write) a tech pack that actually works</h1>
+      <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; font-size:12.5px; color:color-mix(in srgb, var(--color-text) 70%, transparent); letter-spacing:.3px; border-bottom:1px solid var(--color-divider); padding-bottom:28px;">
+        <span>By Jains Internationnal</span><span style="color:var(--color-divider);">·</span><span>8 August 2026</span><span style="color:var(--color-divider);">·</span><span>9 min read</span>
       </div>
     </div>
 
-    <div style="max-width:980px;margin:34px auto 0;padding:0 32px;">
-      <image-slot id="art-techpack-hero" fit="cover" placeholder="Hero image — tech pack spec sheet / flat sketch on a desk" style="width:100%;aspect-ratio:16/9;height:auto;display:block;background:#eef4fa;border-radius:16px;"></image-slot>
+    <div style="max-width:980px; margin:34px auto 0; padding:0 32px;">
+      <image-slot id="art-techpack-hero" fit="cover" placeholder="Hero image — tech pack spec sheet / flat sketch on a desk" style="width:100%; aspect-ratio:16/9; height:auto; display:block; background:var(--color-surface); border-radius:16px;"></image-slot>
     </div>
 
-    <div style="max-width:760px;margin:0 auto;padding:48px 32px 0;">
-      <p style="font-size:19.5px;line-height:1.7;color:#2c3c4c;"><strong>The tech pack is the contract between your idea and the factory's hands.</strong> A clear one gets you a first sample that's close and a bulk run that matches. A vague one gets you guesswork, rounds of corrections, and a production lot that drifts from what you approved. It's the most important document in the whole process.</p>
-      <p style="font-size:17.5px;line-height:1.75;color:#3d4f60;margin:0 0 20px;">Here's what a complete one contains, and where they usually fall short.</p>
+    <div style="max-width:760px; margin:0 auto; padding:48px 32px 0;">
+      <p style="font-size:21px; line-height:34px; margin:0 0 28px;"><strong>The tech pack is the contract between your idea and the factory's hands.</strong> A clear one gets you a first sample that's close and a bulk run that matches. A vague one gets you guesswork, rounds of corrections, and a production lot that drifts from what you approved. It's the most important document in the whole process.</p>
+      <p style="font-size:17.5px; line-height:1.75; color:var(--color-text); margin:0 0 20px;">Here's what a complete one contains, and where they usually fall short.</p>
 
-      <h2>What a tech pack is</h2>
-      <p>A tech pack (technical package) is the full set of specifications a factory needs to develop and produce a garment. It's not a mood board or a sketch — it's a precise, measurable brief covering everything from fabric to stitch to fold. Think of every gap in it as a decision you've handed to someone who's never met your customer.</p>
+      <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:clamp(24px,2.8vw,32px); line-height:1.15; letter-spacing:-0.015em; margin:56px 0 20px; padding-top:28px;">What a tech pack is</h2>
+      <p style="font-size:17px; line-height:30px; margin:0 0 20px;">A tech pack (technical package) is the full set of specifications a factory needs to develop and produce a garment. It's not a mood board or a sketch — it's a precise, measurable brief covering everything from fabric to stitch to fold. Think of every gap in it as a decision you've handed to someone who's never met your customer.</p>
 
-      <h2>The sections that matter</h2>
-      <p>Formats vary, but a complete tech pack covers these:</p>
-      <ul>
-        <li><strong>Flat sketch &amp; callouts.</strong> Technical front/back drawings with arrows naming every seam, topstitch, pocket and detail. The visual spine everything else hangs off.</li>
-        <li><strong>Bill of materials (BOM).</strong> Every component — fabric, thread, buttons, labels, interlining, trims — with supplier, colour and placement. Miss one and sampling stalls.</li>
-        <li><strong>Measurements (POM) &amp; grading.</strong> A points-of-measure chart with the spec at each point, tolerances, and the grade rules across the size range.</li>
-        <li><strong>Construction details.</strong> Stitch class, seam class, SPI and where each is used — the build instructions. (See our guides on <a href="types-of-stitches-and-seams.html" style="color:#1862ab;">stitches and seams</a> and <a href="stitches-per-inch-spi.html" style="color:#1862ab;">SPI</a>.)</li>
-        <li><strong>Fabric &amp; finish.</strong> Composition, weave, GSM with tolerance and finish — anchored to a target, not a word. (See <a href="understanding-fabric-weight-gsm.html" style="color:#1862ab;">fabric weight</a> and <a href="types-of-weave-plain-twill-satin.html" style="color:#1862ab;">weave</a>.)</li>
-        <li><strong>Colourways &amp; artwork.</strong> Approved colour standards (a physical or Pantone reference), plus any prints or embroidery with placement and size.</li>
-        <li><strong>Labels &amp; packaging.</strong> Brand, care and size labels, hangtags, polybag, folding and carton specs — the details that get forgotten and hold up shipping.</li>
+      <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:clamp(24px,2.8vw,32px); line-height:1.15; letter-spacing:-0.015em; margin:56px 0 20px; padding-top:28px;">The sections that matter</h2>
+      <p style="font-size:17px; line-height:30px; margin:0 0 20px;">Formats vary, but a complete tech pack covers these:</p>
+      <ul style="list-style:none; margin:0 0 20px; padding:0;">
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;"><strong>Flat sketch &amp; callouts.</strong> Technical front/back drawings with arrows naming every seam, topstitch, pocket and detail. The visual spine everything else hangs off.</li>
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;"><strong>Bill of materials (BOM).</strong> Every component — fabric, thread, buttons, labels, interlining, trims — with supplier, colour and placement. Miss one and sampling stalls.</li>
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;"><strong>Measurements (POM) &amp; grading.</strong> A points-of-measure chart with the spec at each point, tolerances, and the grade rules across the size range.</li>
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;"><strong>Construction details.</strong> Stitch class, seam class, SPI and where each is used — the build instructions. (See our guides on <a href="/insights/types-of-stitches-and-seams" style="color:var(--color-accent-700);">stitches and seams</a> and <a href="/insights/stitches-per-inch-spi" style="color:var(--color-accent-700);">SPI</a>.)</li>
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;"><strong>Fabric &amp; finish.</strong> Composition, weave, GSM with tolerance and finish — anchored to a target, not a word. (See <a href="/insights/understanding-fabric-weight-gsm" style="color:var(--color-accent-700);">fabric weight</a> and <a href="/insights/types-of-weave-plain-twill-satin" style="color:var(--color-accent-700);">weave</a>.)</li>
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;"><strong>Colourways &amp; artwork.</strong> Approved colour standards (a physical or Pantone reference), plus any prints or embroidery with placement and size.</li>
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;"><strong>Labels &amp; packaging.</strong> Brand, care and size labels, hangtags, polybag, folding and carton specs — the details that get forgotten and hold up shipping.</li>
       </ul>
 
-            <blockquote style="margin:40px 0;padding:24px 0 24px 28px;border-left:3px solid #1862ab;">
-        <p style="font-family:'Spectral',serif;font-style:italic;font-size:22px;line-height:1.45;color:#0f2742;margin:0;">Every blank in a tech pack is a decision you've delegated to the factory. The tighter the spec, the closer the sample — and the fewer the surprises in bulk.</p>
+            <blockquote style="margin:40px 0; padding:24px 0 24px 28px; border-left:4px solid var(--color-accent-700);">
+        <p style="font-family:var(--font-heading); font-style:italic; font-size:22px; line-height:1.45; color:var(--color-text); margin:0;">Every blank in a tech pack is a decision you've delegated to the factory. The tighter the spec, the closer the sample — and the fewer the surprises in bulk.</p>
       </blockquote>
 
-      <h2>Where tech packs go wrong</h2>
-      <p>Most sampling failures trace back to the same gaps:</p>
-      <ul>
-        <li><strong>No tolerances.</strong> "160 GSM" or a bare measurement with no ± invites a legitimate but disappointing result. Always state the acceptable range.</li>
-        <li><strong>Vague fabric.</strong> "Cotton twill" leaves count, weight and finish open. Pin all four.</li>
-        <li><strong>Loose construction.</strong> "Topstitch hem" without stitch, seam and SPI lets the floor default to whatever's fastest.</li>
-        <li><strong>Missing trims.</strong> Buttons, labels and threads left off the BOM stop a sample before it starts.</li>
-        <li><strong>No colour standard.</strong> "Navy" is not a colour; a referenced standard is.</li>
+      <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:clamp(24px,2.8vw,32px); line-height:1.15; letter-spacing:-0.015em; margin:56px 0 20px; padding-top:28px;">Where tech packs go wrong</h2>
+      <p style="font-size:17px; line-height:30px; margin:0 0 20px;">Most sampling failures trace back to the same gaps:</p>
+      <ul style="list-style:none; margin:0 0 20px; padding:0;">
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;"><strong>No tolerances.</strong> "160 GSM" or a bare measurement with no ± invites a legitimate but disappointing result. Always state the acceptable range.</li>
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;"><strong>Vague fabric.</strong> "Cotton twill" leaves count, weight and finish open. Pin all four.</li>
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;"><strong>Loose construction.</strong> "Topstitch hem" without stitch, seam and SPI lets the floor default to whatever's fastest.</li>
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;"><strong>Missing trims.</strong> Buttons, labels and threads left off the BOM stop a sample before it starts.</li>
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;"><strong>No colour standard.</strong> "Navy" is not a colour; a referenced standard is.</li>
       </ul>
 
-      <h2>Tolerances and approval</h2>
-      <p>A spec without a tolerance isn't really a spec. Every critical measurement and fabric property should carry an acceptable range, and the approval process should be explicit: who signs off the sample, against what standard, and what counts as a pass. This is what makes bulk reviewable against a fixed reference rather than an argument.</p>
+      <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:clamp(24px,2.8vw,32px); line-height:1.15; letter-spacing:-0.015em; margin:56px 0 20px; padding-top:28px;">Tolerances and approval</h2>
+      <p style="font-size:17px; line-height:30px; margin:0 0 20px;">A spec without a tolerance isn't really a spec. Every critical measurement and fabric property should carry an acceptable range, and the approval process should be explicit: who signs off the sample, against what standard, and what counts as a pass. This is what makes bulk reviewable against a fixed reference rather than an argument.</p>
 
-      <h2>A good tech pack pays for itself</h2>
-      <p>Time spent tightening a tech pack is repaid many times over: <strong>fewer sampling rounds, faster development, accurate costing, and a bulk run that matches the approved sample.</strong> It also protects you — when expectations are written and measurable, quality disputes have a clear reference point instead of two opinions.</p>
+      <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:clamp(24px,2.8vw,32px); line-height:1.15; letter-spacing:-0.015em; margin:56px 0 20px; padding-top:28px;">A good tech pack pays for itself</h2>
+      <p style="font-size:17px; line-height:30px; margin:0 0 20px;">Time spent tightening a tech pack is repaid many times over: <strong>fewer sampling rounds, faster development, accurate costing, and a bulk run that matches the approved sample.</strong> It also protects you — when expectations are written and measurable, quality disputes have a clear reference point instead of two opinions.</p>
 
-      <h2>A quick pre-send checklist</h2>
-      <ul>
-        <li>Flat sketch with every detail called out?</li>
-        <li>Complete BOM — fabric, thread, trims, labels?</li>
-        <li>POM chart with tolerances and grade rules?</li>
-        <li>Stitch, seam and SPI named at each operation?</li>
-        <li>Fabric: composition, weave, GSM ± and finish?</li>
-        <li>Colour standards and artwork placement?</li>
-        <li>Labels, folding and packaging specified?</li>
+      <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:clamp(24px,2.8vw,32px); line-height:1.15; letter-spacing:-0.015em; margin:56px 0 20px; padding-top:28px;">A quick pre-send checklist</h2>
+      <ul style="list-style:none; margin:0 0 20px; padding:0;">
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;">Flat sketch with every detail called out?</li>
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;">Complete BOM — fabric, thread, trims, labels?</li>
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;">POM chart with tolerances and grade rules?</li>
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;">Stitch, seam and SPI named at each operation?</li>
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;">Fabric: composition, weave, GSM ± and finish?</li>
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;">Colour standards and artwork placement?</li>
+        <li style="background:var(--color-surface); border-radius:14px; padding:16px 20px; font-size:17px; line-height:30px; margin-bottom:10px; list-style:none;">Labels, folding and packaging specified?</li>
       </ul>
-      <p>Tick all seven and you've removed almost every reason a first sample comes back wrong.</p>
-
-
-      <!-- CTA -->
-      <div style="margin:52px 0 8px;background:#f5f9fd;border:1px solid #e3ebf3;border-radius:16px;padding:32px 34px;">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#1862ab;margin-bottom:10px;">Starting a development?</div>
-        <h3 style="font-family:'Spectral',serif;font-weight:600;font-size:23px;color:#0f2742;margin:0 0 10px;">Send us your tech pack — or your idea, and we'll help build one.</h3>
-        <p style="font-size:15.5px;line-height:1.6;color:#54677a;margin:0 0 20px;">Our team in Salem turns tech packs into samples and production every week, and can help you tighten a spec before the first sample is cut. Let's talk.</p>
-        <a href="../index.html#contact" style="text-decoration:none;display:inline-flex;align-items:center;gap:9px;background:#1862ab;color:#fff;font-weight:600;font-size:15px;padding:13px 26px;border-radius:999px;box-shadow:0 10px 24px -12px rgba(24,98,171,.65);">Get in touch →</a>
-      </div>
+      <p style="font-size:17px; line-height:30px; margin:0 0 20px;">Tick all seven and you've removed almost every reason a first sample comes back wrong.</p>
     </div>
   </article>
 
-  <div style="max-width:760px;margin:0 auto;padding:40px 32px 0;">
-    <a href="index.html" style="text-decoration:none;color:#1862ab;font-weight:600;font-size:15px;">← Back to all insights</a>
+  <section style="background:var(--ji-navy); color:#ffffff; margin-top:70px;">
+    <div style="max-width:1200px; margin:0 auto; padding:70px clamp(20px,5vw,56px);">
+      <span style="display:block; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; opacity:0.85; margin-bottom:20px;">Starting a development?</span>
+      <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:clamp(28px,3.6vw,48px); line-height:1.06; letter-spacing:-0.015em; margin:0 0 0 -0.058em; max-width:28ch;">Send us your tech pack — or your idea, and we'll help build one.</h2>
+      <p style="font-size:17px; line-height:30px; margin:28px 0 0; max-width:54ch;">Our team in Salem turns tech packs into samples and production every week, and can help you tighten a spec before the first sample is cut. Let's talk.</p>
+      <div style="display:flex; gap:var(--space-3); flex-wrap:wrap; margin-top:28px;">
+        <a class="btn btn-primary" href="/#help" style="text-decoration:none;">Discuss a sampling run</a>
+        <a class="btn btn-ghost" href="/insights/" style="text-decoration:none; color:#ffffff; border-color:#ffffff;">Back to all insights</a>
+      </div>
+    </div>
+  </section>
+
+  <div style="max-width:1200px; margin:0 auto; padding:0 clamp(20px,5vw,56px);">
+    <footer style="padding:42px 0 56px; font-size:13px; line-height:28px; color:color-mix(in srgb, var(--color-text) 70%, transparent); display:flex; justify-content:space-between; gap:28px; flex-wrap:wrap;">
+      <span>© 2026 Jains Internationnal · Woven &amp; knitwear manufacturing in Salem &amp; Tiruppur since 1993</span>
+      <span>Dhruv Jain +91 77086 68714 · Australia +61 451 992 969</span>
+    </footer>
   </div>
 
-  <!-- FOOTER -->
-  <footer style="background:#0f2742;color:#aebfd0;margin-top:80px;">
-    <div class="ji-foot" style="max-width:1100px;margin:0 auto;padding:54px 32px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;">
-      <div style="display:flex;align-items:center;gap:12px;">
-        <span style="width:14px;height:14px;background:#4f93d6;transform:rotate(45deg);display:inline-block;border-radius:2px;"></span>
-        <div>
-          <div style="font-family:'Spectral',serif;font-size:19px;color:#fff;font-weight:600;">Jains Internationnal</div>
-          <div style="font-size:13px;color:#7e96b0;margin-top:2px;">Wovenwear manufacturing · Salem, Tamil Nadu</div>
-        </div>
-      </div>
-      <div style="display:flex;gap:26px;flex-wrap:wrap;">
-        <a href="../index.html#about" style="text-decoration:none;color:#aebfd0;font-size:14px;">About</a>
-        <a href="../index.html#catalogue" style="text-decoration:none;color:#aebfd0;font-size:14px;">Catalogue</a>
-        <a href="index.html" style="text-decoration:none;color:#aebfd0;font-size:14px;">Insights</a>
-        <a href="../index.html#contact" style="text-decoration:none;color:#aebfd0;font-size:14px;">Contact</a>
-      </div>
-    </div>
-    <div style="border-top:1px solid #1d3a57;">
-      <div style="max-width:1100px;margin:0 auto;padding:20px 32px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#6d86a1;letter-spacing:.3px;">© 2026 Jains Internationnal. Men · Women · Kids wovenwear for export markets.</div>
-    </div>
-  </footer>
-
-  <script src="../image-slot.js"></script>
-  <script>
-  (function(){
-    document.addEventListener('click', function(e){
-      var hdr = document.querySelector('header'); if(!hdr) return;
-      var b = e.target && e.target.closest ? e.target.closest('.ji-burger') : null;
-      if(b){
-        if(hdr.hasAttribute('data-menu-open')){ hdr.removeAttribute('data-menu-open'); b.setAttribute('aria-expanded','false'); }
-        else { hdr.setAttribute('data-menu-open',''); b.setAttribute('aria-expanded','true'); }
-        return;
-      }
-      if(e.target && e.target.closest && e.target.closest('.ji-mobnav a')){
-        hdr.removeAttribute('data-menu-open');
-        var bb=hdr.querySelector('.ji-burger'); if(bb) bb.setAttribute('aria-expanded','false');
-      }
-    }, true);
-  })();
-  </script>
+</div>
+</x-dc>
 </body>
 </html>
